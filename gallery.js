@@ -26,7 +26,7 @@ function makePhoto(photo, featured = false) {
   if (featured) img.fetchPriority = 'high';
   else { img.loading = 'lazy'; img.decoding = 'async'; }
   button.append(img);
-  button.addEventListener('click', () => openPhoto(photos.indexOf(photo)));
+  button.addEventListener('click', event => openPhoto(photos.indexOf(photo), event.detail > 0));
   const caption = document.createElement('figcaption');
   caption.className = 'caption';
   const number = document.createElement('span');
@@ -93,13 +93,13 @@ function showPhoto(index) {
 }
 image.addEventListener('error', () => { $('image-error').hidden = false; });
 image.addEventListener('load', () => { $('image-error').hidden = true; });
-function openPhoto(index) {
+function openPhoto(index, pointerOpened = false) {
   origin = document.activeElement;
   savedOverflow = document.body.style.overflow;
   showPhoto(index);
   viewer.showModal();
   document.body.style.overflow = 'hidden';
-  $('viewer-close').focus();
+  (pointerOpened ? viewer : $('viewer-close')).focus({preventScroll: true});
 }
 function closePhoto() { viewer.close(); }
 viewer.addEventListener('close', () => { document.body.style.overflow = savedOverflow; gesture = null; origin?.focus({preventScroll: true}); });

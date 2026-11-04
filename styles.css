@@ -47,3 +47,12 @@
 .viewer-bottom{padding:4px 6px;row-gap:0;align-content:start;min-height:0}#viewer-description{margin:0;padding:0;font-size:13px;line-height:1.35;white-space:normal}#viewer-note{margin:4px 0 0;padding:0;max-width:65ch;font-size:13px;line-height:1.35;white-space:pre-line}
 .hero{padding-bottom:20px;border-bottom-color:var(--soft)}.hero .caption{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;padding-top:12px;justify-content:start}.feature-label{grid-column:1/-1;font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--soft);margin-bottom:2px}.collection{padding-top:42px}
 @media(max-width:700px){.hero{padding-bottom:18px}.collection{padding-top:34px}}
+
+/* Regression fix: center the image + caption as one composition. */
+.viewer[open]{display:flex;flex-direction:column;justify-content:flex-start}
+.viewer:focus{outline:none}
+.viewer-stage{flex:0 0 auto;margin-top:auto}
+.viewer-bottom{flex:0 0 auto;width:100%;margin-bottom:auto}
+.viewer-controls button{border:0;background:transparent;font-size:22px}
+.viewer-controls button:hover{background:var(--line);color:var(--ink)}
+.viewer-controls button:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
