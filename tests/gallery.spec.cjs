@@ -4,7 +4,9 @@ const assert = require('node:assert/strict');
  const browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',headless:true,args:['--no-sandbox']});
  for (const config of [
   {name:'desktop',width:1440,height:1000},
-  {name:'phone',width:390,height:844,isMobile:true,hasTouch:true},
+  {name:'phone-375',width:375,height:812,isMobile:true,hasTouch:true},
+  {name:'phone-390',width:390,height:844,isMobile:true,hasTouch:true},
+  {name:'phone-430',width:430,height:932,isMobile:true,hasTouch:true},
   {name:'ipad-mini',width:768,height:1024,isMobile:true,hasTouch:true},
   {name:'ipad-mini-landscape',width:1024,height:768,isMobile:true,hasTouch:true},
   {name:'small-phone',width:320,height:568,isMobile:true,hasTouch:true}
@@ -21,6 +23,11 @@ const assert = require('node:assert/strict');
   assert.equal(await page.locator('.plate').nth(7).locator('.number').textContent(),'08');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'No horizontal overflow');
   const bounds=await page.locator('.plate').evaluateAll(els=>els.map(el=>({w:el.clientWidth,r:el.querySelector('img').naturalWidth/el.querySelector('img').naturalHeight}))); assert(bounds.every(b=>b.w>50));
+  if(config.width<=430){
+   const rowWidths=await page.locator('.plate').evaluateAll(els=>els.map(el=>el.getBoundingClientRect().width));
+   const wallWidth=await page.locator('#plates').evaluate(el=>el.getBoundingClientRect().width);
+   assert(rowWidths.every(w=>Math.abs(w-wallWidth)<1),'Every phone photo occupies full width');
+  }
   await page.locator('#hero button').click();
   assert.equal(await page.locator('#viewer-count').textContent(),'08 / 27');
   await page.locator('#viewer-next').click();

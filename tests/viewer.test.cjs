@@ -44,3 +44,7 @@ elements.viewer.dispatch('keydown',{key:'Tab',shiftKey:false,preventDefault(){}}
 elements['viewer-close'].dispatch('click');assert.equal(elements.viewer.open,false);assert.equal(document.activeElement.id,'origin');
 run('openPhoto(26)');elements['viewer-next'].dispatch('click');assert.equal(elements['viewer-count'].textContent,'01 / 27');
 console.log('PASS viewer logic: render, feature, next/previous/wrap, rapid navigation, description updates, synthetic pointer swipe/cancel, keyboard focus trap, close focus restoration. This is not browser/device QA.');
+
+for(const viewport of [375,390,430]) { elements.plates.clientWidth=viewport-24;run('layoutWall()');assert(elements.plates.children.every(el=>parseFloat(el.style.width)===viewport-24),`Phone ${viewport}: every photo full width`); }
+for(const viewport of [768,1024]) {elements.plates.clientWidth=viewport-32;run('layoutWall()');assert(elements.plates.children.some(el=>parseFloat(el.style.width)<viewport-32),`iPad mini ${viewport}: separate justified layout`);}
+console.log('PASS layout logic: 375/390/430 single full-width rows; iPad mini 768/1024 separately retains justified rows. Pixel/device rendering not asserted.');

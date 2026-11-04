@@ -39,16 +39,20 @@ function makePhoto(photo, featured = false) {
 const featured = photos.find(photo => photo.id === gallery.featuredId) || photos[0];
 $('hero').replaceWith(Object.assign(makePhoto(featured, true), {id: 'hero'}));
 $('gallery-title').textContent = gallery.title;
-$('collection-count').textContent = `${photos.length} photographs`;
 photos.forEach(photo => $('plates').append(makePhoto(photo)));
 
 // Justified rows preserve the entire photograph, without crops or empty masonry columns.
 function layoutWall() {
   const wall = $('plates');
   const width = wall.clientWidth;
+  // Every phone photograph gets its own full-width row, including portraits.
+  if (width < 700) {
+    [...wall.children].forEach(el => { el.style.width = `${width}px`; });
+    return;
+  }
   const gap = parseFloat(getComputedStyle(wall).columnGap);
-  const target = width < 540 ? 210 : width < 1000 ? 220 : 290;
-  const maxPerRow = width < 540 ? 2 : width < 1000 ? 3 : 5;
+  const target = width < 1000 ? 220 : 290;
+  const maxPerRow = width < 1000 ? 3 : 5;
   let row = [], ratio = 0;
   const finish = () => {
     const height = (width - gap * (row.length - 1)) / ratio;

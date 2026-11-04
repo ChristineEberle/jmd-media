@@ -37,3 +37,7 @@ const inquiries=fs.readFileSync('inquiries.html','utf8');
 assert(!html.includes('class="inquiries"')); assert(html.includes('href="inquiries.html"'));
 assert(inquiries.includes('id="return-gallery"')); assert(!inquiries.includes('Josh.daynard@icloud.com')); assert(!inquiries.includes('mailto:')); assert(inquiries.includes('id="contact-form"')); assert(inquiries.includes('Instagram'));
 assert(!/print|price|checkout|store/i.test(inquiries)); assert(fs.existsSync('dist/inquiries.html'));
+
+assert(!html.includes('collection-count')); assert(!fs.readFileSync('gallery.js','utf8').includes('${photos.length} photographs'));
+for(const file of ['index.html','about.html','inquiries.html']) {const content=fs.readFileSync(file,'utf8');assert(content.includes('src="logo-ink.png"'));assert(content.includes('src="logo-light.png"'));}
+assert(html.includes('>Look Up!</h1>'));

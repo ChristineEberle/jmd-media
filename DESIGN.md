@@ -6,17 +6,17 @@ JMD.media is a photography site built around looking closely. These standards pr
 
 ## Brand and gallery structure
 
-- Use **JMD.media** as the site brand and **LOOK UP!** as its expressive line.
+- Use **JMD.media** as the site brand and **Look Up!** as its expressive line. Keep the exclamation mark; capitalization and an elegant typographic treatment remain under review, so all caps is not required. Show the actual ink/light logo assets visibly in the header, using the appropriate version for the background.
 - Keep the brand distinct from a gallery title. The current gallery is **Life Might Surprise You**.
 - Each future gallery has its own title, chosen featured photograph, and collection. The design must accommodate more galleries without making the current presentation feel like an empty directory.
-- Keep all **27 photographs** in the current collection.
+- Keep all **27 photographs** in the current collection. Do not announce the total photograph count in the public interface; individual image numbers remain.
 - **At the edge** is the current featured photograph. It appears in both the opening hero and the collection, and supplies the imagery for the gallery share card. Its hero appearance does not remove it from the collection. Place it at **number 8** in the collection, moved from number 6. Reference its stable image identifier or asset rather than its changing position.
 
 ## Image hierarchy and gallery wall
 
 The photographs lead. Present the collection as a closely spaced photographic wall with restrained framing and quiet interface elements. Keep titles and other text subtle but legible. Avoid large text panels, oversized captions, or decorative structures that compete with the work. Place a tiny, subtle title and number beneath each wall image, with readable contrast.
 
-The hero is an introduction to the gallery, not a substitute for browsing the collection. Preserve the character of each photograph and use its orientation intentionally rather than forcing every image into the same shape. The opening sequence is JMD.media, LOOK UP!, Life Might Surprise You, the featured photograph, then the wall. Do not add introductory prose or a category table of contents.
+The hero is an introduction to the gallery, not a substitute for browsing the collection. Preserve the character of each photograph and use its orientation intentionally rather than forcing every image into the same shape. The opening sequence is JMD.media, Look Up!, Life Might Surprise You, the featured photograph, then the wall. Do not add introductory prose or a category table of contents. Use a discreet separator around the featured presentation and left-align its copy.
 
 ## Photo viewer and writing
 
@@ -46,7 +46,7 @@ Do not use print-focused wording or present sales, prices, checkout, or payments
 
 ## Devices and themes
 
-The design must work across phones, tablets including iPad mini, and desktop screens. Treat portrait and landscape layouts as real viewing conditions, not merely scaled versions of the desktop.
+The design must work across phones, tablets including iPad mini, and desktop screens. Treat portrait and landscape layouts as real viewing conditions, not merely scaled versions of the desktop. On phones, every gallery photograph occupies its own row at the full available content width, with its aspect ratio preserved. No paired image rows. The user is reviewing the phone experience; desktop and tablet composition remain subject to their intent rather than inheriting a phone-only decision.
 
 Support device theme choices without making the theme interface compete with the photographs. Text, controls, logos, and viewer surfaces need to remain clear in each supported appearance.
 
@@ -86,7 +86,7 @@ These criteria translate the design direction into testable behavior. They are i
 
 - **Viewer:** preserve the complete photograph with a contain-style fit and maximize the image area. Keep previous, next, and close controls minimal and discoverable; support keyboard and touch browsing without instructional text or dependence on hidden gestures. Let the details scroll below the image instead of reserving fixed caption space. Restore the visitor’s place on closing.
 - **Accessibility:** maintain readable contrast, visible keyboard focus, meaningful image text alternatives, and sufficiently large touch targets. Do not make important controls hover-only. Respect reduced-motion settings.
-- **Responsive layout:** use a fluid image wall and adjust columns and gaps at content-driven breakpoints. Check that titles, menus, and viewer descriptions do not clip, overlap, or push essential controls off screen.
+- **Responsive layout:** use a fluid image wall and adjust columns and gaps at content-driven breakpoints. Check that titles, menus, and viewer descriptions do not clip, overlap, or push essential controls off screen. On phone widths, enforce one full-width photograph per row without pairs; preserve each image’s aspect ratio.
 - **Themes:** offer System, Light, and Dark behavior, remember an explicit choice, and follow the device appearance in System mode. Exact labels and control treatment can remain discreet.
 - **Image delivery:** use responsive image sizes, reserve image dimensions to prevent layout jumps, and prioritize the featured image while loading later gallery images efficiently.
 - **Gallery data:** represent each gallery with a stable identifier, title, featured-image reference, ordered collection, and share metadata. Reuse each photograph’s record across hero and collection so titles, descriptions, and annotations do not drift.
@@ -103,7 +103,7 @@ These criteria translate the design direction into testable behavior. They are i
 
 # Review before release
 
-- Confirm JMD.media, LOOK UP!, and Life Might Surprise You have distinct roles and correct spelling.
+- Confirm JMD.media, Look Up!, and Life Might Surprise You have distinct roles and correct spelling. Verify the chosen typography without assuming all caps.
 - Confirm all 27 current photographs are present, including At the edge in the collection as well as the hero.
 - Inspect the image wall, viewer, About, and Inquiries on phone, iPad mini, and desktop, including tablet rotation.
 - Check light, dark, and system behavior; keyboard focus; touch controls; long descriptions; and reduced motion.
