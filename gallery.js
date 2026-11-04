@@ -33,6 +33,11 @@ function makePhoto(photo, featured = false) {
   number.className = 'number'; number.textContent = String(photos.indexOf(photo) + 1).padStart(2, '0');
   const title = document.createElement('span');
   title.className = 'title'; title.textContent = photo.title;
+  if (featured) {
+    const label = document.createElement('span');
+    label.className = 'feature-label'; label.textContent = 'Featured photograph';
+    caption.append(label);
+  }
   caption.append(number, title); figure.append(button, caption);
   return figure;
 }
@@ -75,6 +80,7 @@ function showPhoto(index) {
   const photo = photos[current];
   // Set src directly: stale preload callbacks can never replace a newer selection.
   $('image-error').hidden = true;
+  $('viewer-stage').style.aspectRatio = `${photo.width} / ${photo.height}`;
   image.alt = photo.alt;
   image.src = `${photo.id}.webp`;
   $('viewer-title').textContent = photo.title;
