@@ -42,3 +42,9 @@ The `/api/contact` Vercel Node function keeps recipient details and credentials 
 The provider receives the visitor’s name, reply email and message when the visitor submits the form. Recipient email is absent from shipped HTML/JavaScript. Existing public repository history may still contain the prior public address; this change is not a secrecy guarantee.
 
 Validation, a honeypot, origin checks, and a warm-instance throttle are included. The in-memory throttle is not a distributed abuse limit. Before public launch, verify provider/domain configuration, add suitable durable provider/WAF protection, and authorize a real delivery test. No external service configuration, security settings, or test email is performed by this source change.
+
+## Viewer caption refinement
+
+The image stage remains `100dvh - 106px - safe-area insets`, unchanged from the phone-reviewed version. Close now shares the bottom controls row, reclaiming the previous 48px top bar. The short description has 13px text with 1.4 line height and compact spacing, aiming to fit typical one/two-line descriptions with the number/title in the remaining space. Longer descriptions, larger accessibility text, unusually narrow viewports, and optional notes can scroll below; no overlay or automatic font shrinking is used. Actual iPhone/iPad rendering still requires browser/device verification.
+
+Footer uses `© 2026 Josh Daynard` for the site/gallery, following the requested standard notice. This is not a claim that every individual image was first published in 2026, nor an ownership transfer.

@@ -7,6 +7,8 @@ const assert = require('node:assert/strict');
   {name:'phone-375',width:375,height:812,isMobile:true,hasTouch:true},
   {name:'phone-390',width:390,height:844,isMobile:true,hasTouch:true},
   {name:'phone-430',width:430,height:932,isMobile:true,hasTouch:true},
+  {name:'iphone-pro-max',width:440,height:956,isMobile:true,hasTouch:true},
+  {name:'iphone-pro-max-landscape',width:956,height:440,isMobile:true,hasTouch:true},
   {name:'ipad-mini',width:768,height:1024,isMobile:true,hasTouch:true},
   {name:'ipad-mini-landscape',width:1024,height:768,isMobile:true,hasTouch:true},
   {name:'small-phone',width:320,height:568,isMobile:true,hasTouch:true}
@@ -30,6 +32,8 @@ const assert = require('node:assert/strict');
   }
   await page.locator('#hero button').click();
   assert.equal(await page.locator('#viewer-count').textContent(),'08 / 27');
+  const descriptionBounds=await page.locator('#viewer-description').evaluate(el=>({bottom:el.getBoundingClientRect().bottom,height:innerHeight}));
+  assert(descriptionBounds.bottom<=descriptionBounds.height,'Featured short description fits without scrolling');
   await page.locator('#viewer-next').click();
   assert.equal(await page.locator('#viewer-count').textContent(),'09 / 27');
   await page.keyboard.press('ArrowLeft');

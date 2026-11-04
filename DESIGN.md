@@ -22,7 +22,9 @@ The hero is an introduction to the gallery, not a substitute for browsing the co
 
 Clicking or tapping any photograph enlarges it in the full photo viewer. Preserve its aspect ratio and maximize the photograph in the available viewing area. Sequential browsing and returning to the wall should be intuitive, with minimal buttons and no instructional copy.
 
-Place the number, title, description, and optional Josh note below the image, accessible by scrolling. Do not use fixed text chrome that shrinks the photograph. Keep all descriptions and annotations off-image.
+Preserve the photo size that worked well in the user’s actual iPhone review. Reclaim unused space below the image to show its number, title, and short description in the same visible viewport without scrolling where possible. Leave room for an optional short Josh note below the photo. Keep all text off-image; do not automatically reduce the photograph to make text fit.
+
+Longer copy, smaller screens, orientation, browser controls, and larger text settings can require scrolling. Use scrolling as the fallback when necessary rather than promising every amount of text will fit on every device. This supersedes the earlier default of placing details below the fold.
 
 Descriptions identify or explain the work. Optional personal annotations are Josh’s first-person voice and should remain distinct from descriptive text. Do not invent personal memories, motives, experiences, atmospheric filler, or unsupported geographic claims. Preserve approved bio copy and captions. An image can stand without an annotation.
 
@@ -84,7 +86,7 @@ Use the accent sparingly for focus or small details. Do not recolor the photogra
 
 These criteria translate the design direction into testable behavior. They are implementation recommendations rather than additional editorial or brand decisions.
 
-- **Viewer:** preserve the complete photograph with a contain-style fit and maximize the image area. Keep previous, next, and close controls minimal and discoverable; support keyboard and touch browsing without instructional text or dependence on hidden gestures. Let the details scroll below the image instead of reserving fixed caption space. Restore the visitor’s place on closing.
+- **Viewer:** preserve the complete photograph with a contain-style fit and retain the image size approved in the actual iPhone review. Keep previous, next, and close controls minimal and discoverable; support keyboard and touch browsing without instructional text or dependence on hidden gestures. Reclaim unused space for short off-image details in the same viewport where possible; do not automatically shrink the image. Allow scrolling when content or device constraints require it. Restore the visitor’s place on closing.
 - **Accessibility:** maintain readable contrast, visible keyboard focus, meaningful image text alternatives, and sufficiently large touch targets. Do not make important controls hover-only. Respect reduced-motion settings.
 - **Responsive layout:** use a fluid image wall and adjust columns and gaps at content-driven breakpoints. Check that titles, menus, and viewer descriptions do not clip, overlap, or push essential controls off screen. On phone widths, enforce one full-width photograph per row without pairs; preserve each image’s aspect ratio.
 - **Themes:** offer System, Light, and Dark behavior, remember an explicit choice, and follow the device appearance in System mode. Exact labels and control treatment can remain discreet.
@@ -96,6 +98,7 @@ These criteria translate the design direction into testable behavior. They are i
 
 - **Watermark:** undecided. Do not treat a watermark’s presence, absence, position, or opacity as approved. Keep original photographs intact so either choice remains possible.
 - **Exact visual values:** final gaps, type sizes, palette values, breakpoints, hero proportions, and share-card composition still need review. Existing prototype values are not permanent standards.
+- **Footer:** keep only a minimal copyright treatment; do not repeat Look Up! in the footer. The copyright owner and exact ownership wording remain undecided. Proposed wording is “© 2026 Josh Daynard,” subject to confirming ownership and that 2026 is the gallery compilation’s first-publication year. That year would not assert that every photograph was first published in 2026. [17 USC 401](https://www.copyright.gov/title17/92chap4.html) describes notice using the copyright symbol, first-publication year, and owner.
 - **Future galleries and access:** make it easy to add named galleries with their own featured images and collections. Some may later be hidden/unlisted or password-protected. Hiding a gallery from the index or search is not security. Real password protection requires server-side access enforcement for both pages and image assets; public GitHub or static image URLs are unsuitable for private originals. Discovery layout, authorization approach, and exact scope remain undecided. Do not implement restricted access now. Keep the current two-destination content menu unless that direction changes.
 - **Editorial content:** future gallery names, featured images, sequence, descriptions, and Josh’s annotations are chosen per gallery.
 - **Commerce:** any later selling experience is a separate decision, not part of the current scope.
