@@ -3,265 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Josh Daynard · Selected photographs</title>
-<meta name="description" content="Selected photographs by Josh Daynard. JMD Media.">
-<script>
-  try{var t=localStorage.getItem("jmd-theme"); if(t==="light"||t==="dark") document.documentElement.setAttribute("data-theme",t);}catch(e){}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: one continuous gallery on a 12-column grid. Canopy opens full width under "LOOK UP";
-   each photograph's size follows its own shape; titles only on the page, details in the viewer. */
-:root{
-  --ground:#e9ebed; --raised:#f4f5f6; --ink:#16181b; --muted:#5b6068; --rule:#cfd3d8; --accent:#a4502b;
-  --scrim:rgba(233,235,237,.97); --show-ink:block; --show-light:none;
-  --display:"Newsreader","Iowan Old Style","Palatino Linotype",Georgia,serif;
-  --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
-  --s1:1.25rem; --s2:1.75rem; --s3:2.6rem; --s4:clamp(2.8rem,7vw,6rem);
-  --gap:clamp(14px,2.4vw,28px);
-  color-scheme:light;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --ground:#121417; --raised:#1a1d21; --ink:#ebe8e3; --muted:#92959b; --rule:#2b2f34; --accent:#d98a62;
-  --scrim:rgba(8,9,11,.96); --show-ink:none; --show-light:block; color-scheme:dark }}
-:root[data-theme="dark"]{
-  --ground:#121417; --raised:#1a1d21; --ink:#ebe8e3; --muted:#92959b; --rule:#2b2f34; --accent:#d98a62;
-  --scrim:rgba(8,9,11,.96); --show-ink:none; --show-light:block; color-scheme:dark }
-
-*{box-sizing:border-box}
-[hidden]{display:none !important}
-html{background:var(--ground)}
-body{margin:0;background:var(--ground);color:var(--ink);font:400 1rem/1.6 var(--body);-webkit-font-smoothing:antialiased;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));transition:background .3s,color .3s}
-img{max-width:100%}
-.wrap{max-width:1320px;margin:0 auto}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:var(--raised);padding:.5rem .8rem;z-index:60}
-
-/* masthead */
-.mast{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1rem;border-bottom:1px solid var(--rule)}
-.logo{display:block;text-decoration:none}
-.logo img{height:52px;width:auto}
-.logo .ink{display:var(--show-ink)} .logo .light{display:var(--show-light)}
-.mast nav{display:flex;align-items:center;gap:1.4rem}
-.mast nav a{text-decoration:none}
-.mast nav a:hover{color:var(--ink)}
-.theme{font:500 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:none;border:1px solid var(--rule);padding:.45rem .75rem;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem}
-.theme::before{content:"";width:.7rem;height:.7rem;border-radius:50%;border:1px solid var(--ink);background:linear-gradient(90deg,var(--ink) 50%,transparent 50%)}
-.theme:hover{border-color:var(--ink)}
-
-/* opening */
-.open{display:grid;gap:var(--s2);padding-block:var(--s4) var(--s3)}
-.open h1{font-family:var(--display);font-weight:300;font-size:clamp(4rem,15vw,12rem);line-height:.86;letter-spacing:.02em;margin:0}
-.open .sub{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:1rem}
-.open .tag{font-family:var(--display);font-style:italic;font-size:clamp(1.4rem,2.6vw,2rem);margin:0}
-.hero{margin:0}
-.hero button,.plate button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;line-height:0}
-.hero img{display:block;width:100%;height:auto}
-
-/* collection */
-.collection{padding-block:var(--s4) var(--s3)}
-.col-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s2);align-items:end;margin-bottom:var(--s3);border-top:1px solid var(--rule);padding-top:var(--s3)}
-.col-head h2{font-family:var(--display);font-weight:300;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1;letter-spacing:-.02em;margin:.45rem 0 0;text-wrap:balance}
-.col-head p{margin:0;color:var(--muted);font-size:1.05rem}
-.plates{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s3) var(--gap);align-items:end}
-.plate{margin:0;min-width:0}
-.plate img{display:block;width:100%;height:auto;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.plate button{overflow:hidden}
-.plate button:hover img{transform:scale(1.015)}
-.cap{display:flex;gap:.9rem;align-items:baseline;padding-top:.7rem}
-.cap .n{font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.06em}
-.cap .t{font-family:var(--display);font-style:italic;font-size:1.1rem;line-height:1.3}
-
-/* about */
-.about{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s4);align-items:center;padding-block:var(--s4);border-top:1px solid var(--rule)}
-.portrait{margin:0}
-.portrait img{display:block;width:100%;height:auto}
-.about-text{display:grid;gap:var(--s1);min-width:0}
-.about-text p{font-family:var(--display);font-weight:300;font-size:clamp(1.3rem,2.3vw,1.75rem);line-height:1.4;margin:0;max-width:34ch;text-wrap:pretty}
-.links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
-.btn{font:500 .85rem var(--body);padding:.65rem 1.05rem;border:1px solid var(--ink);color:var(--ink);text-decoration:none;display:inline-flex}
-.btn:hover{background:var(--ink);color:var(--ground)}
-.addr{font-family:var(--mono);font-size:.8rem;color:var(--muted);user-select:all;overflow-wrap:anywhere}
-.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-block:var(--s2) var(--s3);border-top:1px solid var(--rule)}
-
-/* viewer */
-.lb{position:fixed;inset:0;z-index:50;background:var(--scrim);display:grid;grid-template-rows:auto minmax(0,1fr) auto;
-  padding:calc(env(safe-area-inset-top,0px) + 10px) max(14px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 14px) max(14px,env(safe-area-inset-left,0px))}
-.lb-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-bottom:8px}
-.lb-stage{position:relative;display:grid;place-items:center;min-height:0;touch-action:pan-y}
-.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;transition:opacity .35s}
-.lb-stage img.fade{opacity:0}
-.lb-nav{position:absolute;top:50%;translate:0 -50%;width:3rem;height:3rem;border:1px solid var(--rule);background:var(--scrim);color:var(--ink);font:400 1.3rem var(--display);cursor:pointer;display:grid;place-items:center}
-.lb-prev{left:0}.lb-next{right:0}
-.lb-bot{display:grid;gap:.3rem;padding-top:12px;max-width:1100px;width:100%;margin:0 auto}
-.lb-bot .t{font-family:var(--display);font-style:italic;font-size:1.35rem;line-height:1.2}
-.lb-bot .d{color:var(--muted);font-size:.95rem}
-.icon-btn{border:0;background:none;color:var(--ink);font:500 .78rem var(--mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;padding:.5rem .3rem}
-.icon-btn:hover{color:var(--accent)}
-
-@media (max-width:820px){
-  .logo img{height:42px}
-  .mast nav{gap:.9rem}
-  .col-head{grid-template-columns:minmax(0,1fr);gap:.8rem}
-  .plates{grid-template-columns:minmax(0,1fr);gap:var(--s3)}
-  .plates .plate{grid-column:1/-1 !important}
-  .plates .plate.p img{max-height:80vh;width:auto;max-width:100%;margin:0 auto}
-  .about{grid-template-columns:minmax(0,1fr);gap:var(--s2)}
-  .lb-nav{display:none}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none !important}}
-</style>
+<title>JMD.media · LOOK UP! · Life Might Surprise You</title>
+<meta name="description" content="Life Might Surprise You. Photographs by Josh Daynard.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JMD.media">
+<meta property="og:title" content="LOOK UP! · Life Might Surprise You">
+<meta property="og:description" content="Photographs by Josh Daynard.">
+<meta property="og:image" content="__SOCIAL_IMAGE_URL__">
+<meta property="og:image:alt" content="At the edge, a photograph by Josh Daynard: a surfer above the ocean at dusk.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JMD.media · LOOK UP!">
+<meta name="twitter:description" content="Life Might Surprise You. Photographs by Josh Daynard.">
+<meta name="twitter:image" content="__SOCIAL_IMAGE_URL__">
+<script>try{const t=localStorage.getItem('jmd-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+<script src="gallery-data.js" defer></script>
+<script src="gallery.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#collection">Skip to photographs</a>
-<div class="wrap">
-  <header class="mast">
-    <a class="logo" href="#" aria-label="JMD Media, photography">
-      <img class="ink" src="logo-ink.png" width="640" height="455" alt="JMD Media">
-      <img class="light" src="logo-light.png" width="640" height="455" alt="JMD Media">
-    </a>
-    <nav class="mono" aria-label="Site">
-      <a href="#about">About Josh</a>
-      <button class="theme" id="theme" type="button" aria-label="Switch light or dark">Charcoal</button>
-    </nav>
-  </header>
-
-  <section class="open" aria-labelledby="h">
-    <span class="mono">Selected photographs · 01—27</span>
-    <h1 id="h">LOOK UP</h1>
-    <div class="sub">
-      <p class="tag">Life might surprise you.</p>
-      <span class="mono">Photographs by JMD Media</span>
-    </div>
-  </section>
-  <figure class="hero" id="hero"></figure>
-
-  <main class="collection" id="collection">
-    <div class="col-head">
-      <div><span class="mono">The collection</span><h2>Twenty-seven ways of seeing.</h2></div>
-      <p>Take your time.<br>Select a photograph to step closer.</p>
-    </div>
-    <div class="plates" id="plates"></div>
-  </main>
-
-  <section class="about" id="about" aria-labelledby="about-h">
-        <div class="about-text">
-      <span class="mono" id="about-h">About Josh</span>
-      <p>Josh Daynard photographs the character in living things, familiar places and beautiful machines. His work moves between intimate nature studies, expansive skies and unguarded human moments, following light and curiosity rather than a single category.</p>
-      <div class="links">
-        <a class="btn" href="mailto:Josh.daynard@icloud.com?subject=Photography%20inquiry">Photo &amp; print inquiries</a>
-        <a class="btn" href="https://www.instagram.com/joshdaynard/" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <span class="addr">Josh.daynard@icloud.com</span>
-    </div>
-  </section>
-
-  <footer class="foot mono"><span>Josh Daynard / JMD Media</span><span>Selected photographs</span></footer>
+<div id="page">
+<header class="mast">
+<a class="brand" href="#top" aria-label="JMD.media home">JMD<span>.media</span></a>
+<nav aria-label="Site"><a href="about.html" id="about-link">About</a><a href="inquiries.html" id="inquiries-link">Inquiries</a></nav>
+<button class="theme" id="theme" type="button" aria-label="Switch to dark theme">◐</button>
+</header>
+<main id="top">
+<section class="opening" aria-labelledby="site-title"><div class="opening-line"><h1 id="site-title">LOOK UP!</h1></div><h2 class="gallery-heading" id="gallery-title">Life Might Surprise You</h2><figure class="hero" id="hero"></figure></section>
+<section class="collection" id="collection" aria-labelledby="gallery-title"><span id="collection-count" class="collection-count"></span><div class="plates" id="plates"></div></section>
+</main>
+<footer><span>JMD.media</span><span>LOOK UP!</span><span>Photographs © Josh Daynard</span></footer>
 </div>
-
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photograph viewer">
-  <div class="lb-top">
-    <span class="mono" id="lb-count"></span>
-    <div><button class="icon-btn" id="lb-info" type="button" aria-expanded="false">Details +</button>
-    <button class="icon-btn" id="lb-close" type="button">Close ×</button></div>
-  </div>
-  <div class="lb-stage" id="lb-stage">
-    <img id="lb-img" alt="">
-    <button class="lb-nav lb-prev" id="lb-prev" type="button" aria-label="Previous photograph">←</button>
-    <button class="lb-nav lb-next" id="lb-next" type="button" aria-label="Next photograph">→</button>
-  </div>
-  <div class="lb-bot">
-    <div class="t" id="lb-t"></div>
-    <div class="d" id="lb-d" hidden></div>
-    <span class="mono">Swipe or use arrows to explore · Escape to close</span>
-  </div>
-</div>
-
-<script>
-const META = [{"n":"01","w":9504,"h":6336},{"n":"02","w":4128,"h":5504},{"n":"03","w":7952,"h":5304},{"n":"04","w":8498,"h":5311},{"n":"05","w":5474,"h":2737},{"n":"06","w":7947,"h":5298},{"n":"07","w":9504,"h":6336},{"n":"08","w":9504,"h":6336},{"n":"09","w":6064,"h":7580},{"n":"10","w":2664,"h":1499},{"n":"11","w":4738,"h":5923},{"n":"12","w":2185,"h":2185},{"n":"13","w":6667,"h":5000},{"n":"14","w":1222,"h":1222},{"n":"15","w":2082,"h":2603},{"n":"16","w":6192,"h":4128},{"n":"17","w":4407,"h":2938},{"n":"18","w":1474,"h":1965},{"n":"19","w":3197,"h":2131},{"n":"20","w":7755,"h":5170},{"n":"21","w":7138,"h":4015},{"n":"22","w":3713,"h":2089},{"n":"23","w":9504,"h":6336},{"n":"24","w":2962,"h":4441},{"n":"25","w":3971,"h":2234},{"n":"26","w":6336,"h":7920},{"n":"27","w":1894,"h":2525}];
-// [title, alt line, layout]
-const PLATES = [
- ["Light through the canopy","Sunbeams radiate through a dense green canopy.","hero"],
- ["Copper spillway","Copper reflections bend into blue-white water as the weir pours over.","1-5"],
- ["Light beneath the pier","Low sun through the pilings, and a wave breaking between them.","6-7"],
- ["Color and reflection, Capitola","The painted village doubled in still water under a full sky.","1-8"],
- ["Shoreline at dusk","Town lights coming on across the bay as the clouds catch fire.","5-8"],
- ["At the edge","A surfer poised above the water while the crowd leans in.","f"],
- ["Suspended at sunset","A row of chairs and dangling legs, turned to silhouette.","1-8"],
- ["Night passengers","Two windows, two gestures, and the city lines running past.","f"],
- ["After the skating","Worn boots and looping laces resting against brick.","1-5"],
- ["Window light","Someone lost in thought in soft, falling light.","6-7"],
- ["Two-colored gaze","A dog’s two-colored eyes, held in sculpted light.","2-5"],
- ["Eye to eye","A crested gecko at rest in a hand, looking straight back.","7-5"],
- ["Mantis encounter","A mantis met face to face, green on green.","5-8"],
- ["Inside the daffodil","A honeybee working deep in the trumpet of a daffodil.","1-5"],
- ["Metallic visitor","A fly on a worn blue perch, with room around it.","7-4"],
- ["Feather architecture","Fine silver lines and gentle curves, close enough to read as pattern.","f"],
- ["A circle of feathers","A preening duck folds itself into an almost perfect ring.","1-7"],
- ["Water falling from the beak","An egret faces the lens, droplets hanging in the air.","8-5"],
- ["Hawks in conversation","Two hawks, wings open, turned toward each other in warm light.","5-8"],
- ["Weathering it","A small soaked bird sits out the rain on the roofline.","f"],
- ["Red barn, breaking light","Mist in layers behind a red barn as the horizon glows.","1-8"],
- ["Fog on the ridge","Cloud spilling over the ridgeline above scattered houses.","5-8"],
- ["One cloud","A single cloud, standing alone like an object.","1-8"],
- ["Moon and flight path","The moon, an aircraft and its trails, perfectly aligned.","1-4"],
- ["Luminous sky trail","A bright curved trail and its textured wake against deep blue.","6-7"],
- ["Storm over the neighborhood","A heavy ceiling of cloud and one small piece of rainbow.","4-6"],
- ["Fallen pink flower","A single bright flower on rough, dark pavement.","5-4"]
-];
-const items = PLATES.map((p,i)=>({...META[i], title:p[0], line:p[1], lay:p[2], i}));
-const pad = n => String(n).padStart(2,"0");
-const $ = id => document.getElementById(id);
-const span = lay => lay==="f" ? "1 / -1" : (([a,b])=>`${a} / span ${b}`)(lay.split("-"));
-
-function fig(it, hero){
-  const f=document.createElement("figure");
-  if(!hero){ f.className="plate"+(it.h>it.w?" p":""); f.style.gridColumn=span(it.lay); }
-  f.innerHTML=`<button type="button" aria-label="View ${it.title} larger"><img src="${hero?it.n:it.n+"-s"}.webp" width="${it.w}" height="${it.h}" alt="${it.line}" ${hero?'fetchpriority="high"':'loading="lazy" decoding="async"'}></button>
-  <figcaption class="cap"><span class="n">${pad(it.i+1)}</span><span class="t">${it.title}</span></figcaption>`;
-  f.querySelector("button").addEventListener("click",()=>open(it.i));
-  return f;
-}
-const hero=$("hero"); const hf=fig(items[0],true); while(hf.firstChild) hero.append(hf.firstChild);
-hero.querySelector("button").addEventListener("click",()=>open(0));
-const grid=$("plates"); items.slice(1).forEach(it=>grid.append(fig(it)));
-
-// theme
-const root=document.documentElement;
-function isDark(){ const t=root.getAttribute("data-theme"); return t ? t==="dark" : matchMedia("(prefers-color-scheme: dark)").matches; }
-function label(){ $("theme").textContent = isDark() ? "Light" : "Charcoal"; }
-$("theme").addEventListener("click",()=>{ const next=isDark()?"light":"dark"; root.setAttribute("data-theme",next); try{localStorage.setItem("jmd-theme",next);}catch(e){} label(); });
-try{ matchMedia("(prefers-color-scheme: dark)").addEventListener("change",label); }catch(e){}
-label();
-
-// viewer
-const lb=$("lb"), img=$("lb-img"); let cur=0, lastFocus=null;
-function show(i){
-  cur=(i+items.length)%items.length; const it=items[cur];
-  img.classList.add("fade");
-  const nx=new Image(); nx.src=`${it.n}.webp`;
-  nx.onload=nx.onerror=()=>{ img.src=nx.src; img.alt=it.line; img.classList.remove("fade"); };
-  $("lb-count").textContent=`${pad(cur+1)} / ${items.length}`;
-  $("lb-t").textContent=it.title; $("lb-d").textContent=it.line;
-  [cur+1,cur-1].forEach(j=>{ new Image().src=`${items[(j+items.length)%items.length].n}.webp`; });
-}
-function open(i){ lastFocus=document.activeElement; lb.hidden=false; document.body.style.overflow="hidden"; show(i); $("lb-close").focus(); }
-function close(){ lb.hidden=true; document.body.style.overflow=""; lastFocus&&lastFocus.focus&&lastFocus.focus(); }
-$("lb-close").onclick=close; $("lb-prev").onclick=()=>show(cur-1); $("lb-next").onclick=()=>show(cur+1);
-$("lb-info").onclick=()=>{ const d=$("lb-d"); d.hidden=!d.hidden; $("lb-info").setAttribute("aria-expanded",String(!d.hidden)); $("lb-info").textContent=d.hidden?"Details +":"Details −"; };
-document.addEventListener("keydown",e=>{ if(lb.hidden) return;
-  if(e.key==="Escape") close(); else if(e.key==="ArrowRight") show(cur+1); else if(e.key==="ArrowLeft") show(cur-1); });
-let sx=null,sy=null;
-$("lb-stage").addEventListener("pointerdown",e=>{sx=e.clientX;sy=e.clientY;});
-$("lb-stage").addEventListener("pointerup",e=>{ if(sx===null) return; const dx=e.clientX-sx, dy=e.clientY-sy;
-  if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)) show(cur+(dx<0?1:-1)); else if(e.target===$("lb-stage")) close(); sx=null; });
-</script>
+<dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+<div class="viewer-top"><button id="viewer-close" type="button" aria-label="Close photograph viewer">Close <span aria-hidden="true">×</span></button></div>
+<div class="viewer-stage" id="viewer-stage"><img id="viewer-image" alt="" draggable="false"><p id="image-error" hidden>Unable to load this photograph. Please try another or reopen it.</p></div>
+<div class="viewer-bottom"><div class="viewer-caption"><span id="viewer-count" aria-live="polite" aria-atomic="true"></span><h2 id="viewer-title"></h2></div><div class="viewer-controls"><button id="viewer-prev" type="button" aria-label="Previous photograph">←</button><button id="viewer-next" type="button" aria-label="Next photograph">→</button></div><p id="viewer-description"></p><p id="viewer-note" hidden></p></div>
+</dialog>
 </body>
 </html>
