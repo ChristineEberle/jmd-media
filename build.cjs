@@ -1,7 +1,12 @@
 // Static build: social scrapers read HTML, so resolve absolute image URLs at build time.
 const fs = require('node:fs');
 const path = require('node:path');
-const origin = process.env.SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://jmd-media.vercel.app');
+// This review branch already has a public, stable alias. Individual preview URLs
+// remain protected, so social crawlers must fetch the same photograph via that alias.
+const publicPreviewOrigin = process.env.VERCEL_GIT_COMMIT_REF === 'redesign/gallery-wall'
+ ? 'https://jmd-media-git-redesign-gallery-wall-pure-5890.vercel.app'
+ : null;
+const origin = process.env.SITE_URL || publicPreviewOrigin || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://jmd-media.vercel.app');
 const url = new URL(origin);
 if (url.protocol !== 'https:' && url.hostname !== 'localhost') throw new Error('SITE_URL must use HTTPS');
 fs.mkdirSync('dist', { recursive: true });
