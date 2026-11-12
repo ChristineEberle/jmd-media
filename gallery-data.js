@@ -4,7 +4,7 @@ window.JMD_DATA = {
   "galleries": [
     {
       "id": "life-might-surprise-you",
-      "title": "Life Might Surprise You",
+      "title": "Light, Unscripted",
       "featuredId": "06",
       "photos": [
         {

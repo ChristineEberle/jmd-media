@@ -56,3 +56,9 @@
 .viewer-controls button{border:0;background:transparent;font-size:22px}
 .viewer-controls button:hover{background:var(--line);color:var(--ink)}
 .viewer-controls button:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
+
+/* Quietly open the brand line, with a small optical gap between the two o letters. */
+.opening h1{letter-spacing:.015em;font-kerning:normal}
+.tagline-first-o{margin-right:.025em}
+/* Clarify that the repeated hero is an intentional featured selection. */
+.hero .feature-label{font-weight:600}

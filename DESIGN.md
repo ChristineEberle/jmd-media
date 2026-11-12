@@ -115,3 +115,11 @@ These criteria translate the design direction into testable behavior. They are i
 - Record the watermark decision before calling its treatment final.
 - Keep future-gallery support intact and avoid adding unapproved store or payment features.
 
+
+# Live preview refinement · 12 November 2026
+
+- Header: rarely or never changes.
+- Brand tagline: **Look Up!**, almost never changes. Its existing title case and exclamation mark remain. Use subtle tracking (`.015em`) and a small optical gap (`.025em`) between the two o letters.
+- Campaign slogan: **Light, Unscripted**, capital L and U, comma, no final period. Replaces Life Might Surprise You and may change seasonally or yearly.
+- Featured picture title: changes with each gallery; currently **At the edge**. The featured photograph and all 27 photographs remain unchanged. The existing featured label is semibold to clarify the intentional repeat in the wall.
+- The stable internal gallery ID remains unchanged to preserve compatibility.
