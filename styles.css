@@ -9,7 +9,9 @@
 @media(max-width:700px){.mast{min-height:70px;gap:18px}.brand{font-size:23px}.mast nav{gap:19px;font-size:12px}.opening{padding-top:24px}.opening-line{margin-bottom:16px}.opening-line>span{font-size:10px;max-width:90px;text-align:right;line-height:1.5}.hero img{height:auto;max-height:none}.collection{padding-top:29px;padding-bottom:36px}.collection-head{margin-bottom:15px}.collection-head h2{font-size:22px}.collection-head>span{font-size:9px}.plates{gap:11px 7px}.caption{font-size:10px;padding-top:6px;min-height:25px;gap:6px}.about,.inquiries{grid-template-columns:1fr;gap:18px;padding:30px 0}.about p,.inquiries p{font-size:15px}footer{flex-wrap:wrap;font-size:9px}.viewer-caption{display:block}.viewer-caption button{min-height:30px;padding:4px 0}.viewer-bottom{column-gap:8px}.viewer-caption h2{font-size:12px}.viewer-controls{gap:6px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-.portrait{display:block;width:160px;height:160px;border-radius:50%;margin-top:22px;object-fit:cover}
+.portrait-figure{width:min(260px,100%);margin-top:22px}
+.portrait-figure .portrait{display:block;width:100%;height:auto}
+.portrait-figure figcaption{margin-top:8px;font-size:11px;line-height:1.4;color:var(--soft)}
 
 .gallery-heading{font-size:clamp(17px,2vw,24px);font-weight:400;margin:0 0 20px;letter-spacing:-.025em}.collection-count{display:block;text-align:right;font-size:10px;color:var(--soft);margin-bottom:14px}
 
@@ -22,7 +24,7 @@
 #viewer-count{font-size:10px;color:var(--soft);white-space:nowrap}
 #viewer-description,#viewer-note{grid-column:1/-1;margin:18px auto 20px;width:100%;max-width:65ch;max-height:none;overflow:visible;font-size:14px;line-height:1.6;color:var(--soft)}
 #viewer-note{margin-top:0}
-.about-page{min-height:calc(100svh - 180px);padding-top:34px}.return-gallery{display:inline-block;font-size:13px;margin-bottom:24px}.about-page .about{border-top:0;padding-top:12px}.about-page h1{font-weight:400;font-size:32px;letter-spacing:-.035em;margin:0}.about-page .portrait{width:min(260px,100%);height:auto}.mast [aria-current=page]{text-decoration:underline}
+.about-page{min-height:calc(100svh - 180px);padding-top:34px}.return-gallery{display:inline-block;font-size:13px;margin-bottom:24px}.about-page .about{border-top:0;padding-top:12px}.about-page h1{font-weight:400;font-size:32px;letter-spacing:-.035em;margin:0}.mast [aria-current=page]{text-decoration:underline}
 
 .contact-page{border-top:0;padding-top:12px}.contact-page h1{margin:0}.contact-social{margin-top:24px!important}
 
