@@ -38,6 +38,8 @@ Preserve this copy without an appended location.
 
 Use only two content menu destinations: **About** and **Inquiries**. Treat the theme switch as a quiet utility, not another content destination. Instagram can live within About or contact information. Do not add category navigation, a table of contents, or a section-navigation replacement above the photographs. The opening flows directly into the image wall.
 
+Keep all links free of underlines, including on hover, focus, and the active page. Set text links in a distinct color with sufficient contrast against both the page background and adjacent text in light and dark themes. Use each social platform’s standard icon with an accessible link name. Keep keyboard focus visible.
+
 About is a separate page that opens in the same tab, not a modal or a section at the bottom of the image wall. Use the approved bio and the temporary portrait. Provide a clear return to the gallery that preserves scroll position and gallery context. Browser Back and Forward and direct links should behave sensibly.
 
 Inquiries is its own simple page with a general, open invitation to contact Josh for any reason. Preserve Instagram. Never display Josh’s email address. Route inquiries privately through a server-side form or server-side configuration, keeping the raw recipient out of public client code wherever practical. Do not embed the email address in this shareable specification.
