@@ -40,4 +40,4 @@ assert(!/print|price|checkout|store/i.test(inquiries)); assert(fs.existsSync('di
 
 assert(!html.includes('collection-count')); assert(!fs.readFileSync('gallery.js','utf8').includes('${photos.length} photographs'));
 for(const file of ['index.html','about.html','inquiries.html']) {const content=fs.readFileSync(file,'utf8');assert(content.includes('src="logo-ink.png"'));assert(content.includes('src="logo-light.png"'));}
-assert(html.includes('>Look Up!</h1>'));
+assert.equal(html.match(/<h1 id="site-title">([\s\S]*?)<\/h1>/)[1].replace(/<[^>]+>/g,''), 'Look Up!');

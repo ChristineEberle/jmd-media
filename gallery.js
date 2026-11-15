@@ -24,7 +24,15 @@ function makePhoto(photo, featured = false) {
   img.width = photo.width;
   img.height = photo.height;
   if (featured) img.fetchPriority = 'high';
-  else { img.loading = 'lazy'; img.decoding = 'async'; }
+  else {
+    const longestEdge = Math.max(photo.width, photo.height);
+    const webpWidth = maxEdge => Math.round(photo.width * Math.min(1, maxEdge / longestEdge));
+    img.srcset = `${photo.id}-s.webp ${webpWidth(1100)}w, ${photo.id}.webp ${webpWidth(2400)}w`;
+    img.sizes = 'auto, (max-width: 700px) 96vw, min(96vw, 1120px)';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    figure.style.setProperty('--photo-ratio', photo.width / photo.height);
+  }
   button.append(img);
   button.addEventListener('click', event => openPhoto(photos.indexOf(photo), event.detail > 0));
   const caption = document.createElement('figcaption');
@@ -45,35 +53,6 @@ const featured = photos.find(photo => photo.id === gallery.featuredId) || photos
 $('hero').replaceWith(Object.assign(makePhoto(featured, true), {id: 'hero'}));
 $('gallery-title').textContent = gallery.title;
 photos.forEach(photo => $('plates').append(makePhoto(photo)));
-
-// Justified rows preserve the entire photograph, without crops or empty masonry columns.
-function layoutWall() {
-  const wall = $('plates');
-  const width = wall.clientWidth;
-  // Every phone photograph gets its own full-width row, including portraits.
-  if (width < 700) {
-    [...wall.children].forEach(el => { el.style.width = `${width}px`; });
-    return;
-  }
-  const gap = parseFloat(getComputedStyle(wall).columnGap);
-  const target = width < 1000 ? 220 : 290;
-  const maxPerRow = width < 1000 ? 3 : 5;
-  let row = [], ratio = 0;
-  const finish = () => {
-    const height = (width - gap * (row.length - 1)) / ratio;
-    row.forEach(({photo, el}) => { el.style.width = `${height * photo.width / photo.height}px`; });
-    row = []; ratio = 0;
-  };
-  photos.forEach((photo, i) => {
-    const r = photo.width / photo.height;
-    if (row.length && (ratio + r) * target > width && Math.abs(width / ratio - target) < Math.abs(width / (ratio + r) - target)) finish();
-    row.push({photo, el: wall.children[i]}); ratio += r;
-    if (row.length >= maxPerRow || ratio * target >= width) finish();
-  });
-  if (row.length) finish();
-}
-new ResizeObserver(layoutWall).observe($('plates'));
-layoutWall();
 
 function showPhoto(index) {
   current = (index + photos.length) % photos.length;

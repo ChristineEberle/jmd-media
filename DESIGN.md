@@ -14,7 +14,7 @@ JMD.media is a photography site built around looking closely. These standards pr
 
 ## Image hierarchy and gallery wall
 
-The photographs lead. Present the collection as a closely spaced photographic wall with restrained framing and quiet interface elements. Keep titles and other text subtle but legible. Avoid large text panels, oversized captions, or decorative structures that compete with the work. Place a tiny, subtle title and number beneath each wall image, with readable contrast.
+The photographs lead. Present the collection as a single vertical sequence with restrained framing and quiet interface elements. Give each photograph its own row at every screen size. Never use side-by-side photos, justified rows, or a multi-column grid. Keep titles and other text subtle but legible. Avoid large text panels, oversized captions, or decorative structures that compete with the work. Place a tiny, subtle title and number beneath each wall image, with readable contrast.
 
 The hero is an introduction to the gallery, not a substitute for browsing the collection. Preserve the character of each photograph and use its orientation intentionally rather than forcing every image into the same shape. The opening sequence is JMD.media, Look Up!, Life Might Surprise You, the featured photograph, then the wall. Do not add introductory prose or a category table of contents. Make the featured section clearly identifiable with a modest “Featured photograph” label and its title left-aligned. Use an intentional boundary and spacing before the collection; overly subtle rules alone are insufficient.
 
@@ -50,7 +50,7 @@ Do not use print-focused wording or present sales, prices, checkout, or payments
 
 ## Devices and themes
 
-The design must work across phones, tablets including iPad mini, and desktop screens. Treat portrait and landscape layouts as real viewing conditions, not merely scaled versions of the desktop. On phones, every gallery photograph occupies its own row at the full available content width, with its aspect ratio preserved. No paired image rows. The user is reviewing the phone experience; desktop and tablet composition remain subject to their intent rather than inheriting a phone-only decision.
+Use one photograph per row on phones, tablets, laptops, and desktops in either orientation. Preserve aspect ratios. Fill the gallery width on phones and use the larger canvas for more generous image sizes and margins on wider screens.
 
 Support device theme choices without making the theme interface compete with the photographs. Text, controls, logos, and viewer surfaces need to remain clear in each supported appearance.
 
@@ -90,7 +90,7 @@ These criteria translate the design direction into testable behavior. They are i
 
 - **Viewer:** preserve the complete photograph with a contain-style fit and retain the image size approved in the actual iPhone review. Keep previous, next, and close controls minimal and discoverable; support keyboard and touch browsing without instructional text or dependence on hidden gestures. Reclaim unused space for short off-image details in the same viewport where possible; do not automatically shrink the image. Allow scrolling when content or device constraints require it. Restore the visitor’s place on closing.
 - **Accessibility:** maintain readable contrast, visible keyboard focus, meaningful image text alternatives, and sufficiently large touch targets. Do not make important controls hover-only. Respect reduced-motion settings.
-- **Responsive layout:** use a fluid image wall and adjust columns and gaps at content-driven breakpoints. Check that titles, menus, and viewer descriptions do not clip, overlap, or push essential controls off screen. On phone widths, enforce one full-width photograph per row without pairs; preserve each image’s aspect ratio.
+- **Responsive layout:** keep one photograph per row at every breakpoint. Verify the sequence on phone, tablet, laptop, and wide desktop viewports. Scale the images and spacing with the viewport and preserve each aspect ratio.
 - **Themes:** offer System, Light, and Dark behavior, remember an explicit choice, and follow the device appearance in System mode. Exact labels and control treatment can remain discreet.
 - **Image delivery:** use responsive image sizes, reserve image dimensions to prevent layout jumps, and prioritize the featured image while loading later gallery images efficiently.
 - **Gallery data:** represent each gallery with a stable identifier, title, featured-image reference, ordered collection, and share metadata. Reuse each photograph’s record across hero and collection so titles, descriptions, and annotations do not drift.

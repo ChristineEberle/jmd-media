@@ -24,11 +24,15 @@ const assert = require('node:assert/strict');
   assert.match(await page.locator('.plate').nth(7).locator('img').getAttribute('src'),/^06-s.webp$/);
   assert.equal(await page.locator('.plate').nth(7).locator('.number').textContent(),'08');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'No horizontal overflow');
-  const bounds=await page.locator('.plate').evaluateAll(els=>els.map(el=>({w:el.clientWidth,r:el.querySelector('img').naturalWidth/el.querySelector('img').naturalHeight}))); assert(bounds.every(b=>b.w>50));
-  if(config.width<=430){
-   const rowWidths=await page.locator('.plate').evaluateAll(els=>els.map(el=>el.getBoundingClientRect().width));
+  const rows = await page.locator('.plate').evaluateAll(plates => plates.map(plate => {
+    const box = plate.getBoundingClientRect();
+    return {top:box.top,bottom:box.bottom,width:box.width};
+  }));
+  assert(rows.every((row,i)=>row.width>50 && (i===0 || row.top>=rows[i-1].bottom)),
+   'Every photograph occupies a separate row');
+  if(config.width<=700){
    const wallWidth=await page.locator('#plates').evaluate(el=>el.getBoundingClientRect().width);
-   assert(rowWidths.every(w=>Math.abs(w-wallWidth)<1),'Every phone photo occupies full width');
+   assert(rows.every(row=>Math.abs(row.width-wallWidth)<1),'Each phone photograph fills the gallery width');
   }
   await page.locator('#hero button').click();
   assert.equal(await page.locator('#viewer-count').textContent(),'08 / 27');

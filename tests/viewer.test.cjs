@@ -4,7 +4,7 @@ const vm = require('node:vm');
 const path = require('node:path');
 process.chdir(path.resolve(__dirname,'..'));
 class Element {
- constructor(id=''){this.id=id;this.children=[];this.hidden=false;this.style={};this.listeners={};this.attrs={};this.clientWidth=1200;this.dataset={};}
+ constructor(id=''){this.id=id;this.children=[];this.hidden=false;this.style={setProperty(name,value){this[name]=value}};this.listeners={};this.attrs={};this.clientWidth=1200;this.dataset={};}
  append(...els){this.children.push(...els)}
  addEventListener(type,fn){(this.listeners[type]??=[]).push(fn)}
  dispatch(type,event={}){for(const f of this.listeners[type]||[])f(event)}
@@ -21,7 +21,7 @@ const elements={};
 const ids=['hero','gallery-title','collection-count','plates','theme','viewer','viewer-image','image-error','viewer-title','viewer-count','viewer-description','description-toggle','viewer-note','note-toggle','viewer-prev','viewer-next','viewer-close','viewer-stage'];
 for(const id of ids)elements[id]=new Element(id);
 const document={documentElement:new Element('html'),body:new Element('body'),activeElement:new Element('origin'),getElementById:id=>elements[id],createElement:tag=>new Element()};
-const box={window:{},document,localStorage:{setItem(){}},matchMedia:()=>({matches:false,addEventListener(){}}),getComputedStyle:()=>({columnGap:'9'}),Image:class{},ResizeObserver:class{observe(){}},console};
+const box={window:{},document,localStorage:{setItem(){}},matchMedia:()=>({matches:false,addEventListener(){}}),Image:class{},console};
 vm.createContext(box);
 vm.runInContext(fs.readFileSync('gallery-data.js','utf8'),box);
 vm.runInContext(fs.readFileSync('gallery.js','utf8'),box);
@@ -44,7 +44,3 @@ elements.viewer.dispatch('keydown',{key:'Tab',shiftKey:false,preventDefault(){}}
 elements['viewer-close'].dispatch('click');assert.equal(elements.viewer.open,false);assert.equal(document.activeElement.id,'origin');
 run('openPhoto(26)');elements['viewer-next'].dispatch('click');assert.equal(elements['viewer-count'].textContent,'01 / 27');
 console.log('PASS viewer logic: render, feature, next/previous/wrap, rapid navigation, description updates, synthetic pointer swipe/cancel, keyboard focus trap, close focus restoration. This is not browser/device QA.');
-
-for(const viewport of [375,390,430]) { elements.plates.clientWidth=viewport-24;run('layoutWall()');assert(elements.plates.children.every(el=>parseFloat(el.style.width)===viewport-24),`Phone ${viewport}: every photo full width`); }
-for(const viewport of [768,1024]) {elements.plates.clientWidth=viewport-32;run('layoutWall()');assert(elements.plates.children.some(el=>parseFloat(el.style.width)<viewport-32),`iPad mini ${viewport}: separate justified layout`);}
-console.log('PASS layout logic: 375/390/430 single full-width rows; iPad mini 768/1024 separately retains justified rows. Pixel/device rendering not asserted.');
