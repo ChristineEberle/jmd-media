@@ -8,6 +8,15 @@ window.JMD_DATA = {
       "featuredId": "06",
       "photos": [
         {
+          "id": "06",
+          "width": 7947,
+          "height": 5298,
+          "title": "At the edge",
+          "alt": "A surfer at a rocky ocean edge, watched by a crowd.",
+          "note": null,
+          "description": "A surfer at a rocky ocean edge, watched by a crowd."
+        },
+        {
           "id": "01",
           "width": 9504,
           "height": 6336,
@@ -69,15 +78,6 @@ window.JMD_DATA = {
           "alt": "A black-and-white city scene with passengers framed by tram windows.",
           "note": null,
           "description": "A black-and-white city scene with passengers framed by tram windows."
-        },
-        {
-          "id": "06",
-          "width": 7947,
-          "height": 5298,
-          "title": "At the edge",
-          "alt": "A surfer at a rocky ocean edge, watched by a crowd.",
-          "note": null,
-          "description": "A surfer at a rocky ocean edge, watched by a crowd."
         },
         {
           "id": "09",

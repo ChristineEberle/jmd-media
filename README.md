@@ -15,7 +15,7 @@ Open http://localhost:8768. Vercel runs the same build through `vercel.json`.
 
 ## Content
 
-`gallery-data.js` stores galleries and stable photo IDs. The array order controls display numbering, not asset filenames. Photo 06 (`At the edge`) is the featured image and eighth gallery item. Add future galleries to `galleries`; choose the current gallery in `gallery.js`. Do not automatically invent photographer notes. `note: null` omits the optional note. Approved notes and original descriptions flow below the full image without shrinking its viewport-sized stage.
+`gallery-data.js` stores galleries and stable photo IDs. The array order controls display numbering, not asset filenames. Photo 06 (`At the edge`) is the featured image and first gallery item. It appears once as the opening image, with the other 26 photographs below; all 27 remain in viewer navigation. The relative order of the other photographs is preserved. Add future galleries to `galleries`; choose the current gallery in `gallery.js`. Do not automatically invent photographer notes. `note: null` omits the optional note. Approved notes and original descriptions flow below the full image without shrinking its viewport-sized stage.
 
 Descriptions are restored from the earlier public preview where verified; the four newer photos retain their current descriptions. PDF selection rationale and editing cautions are not public captions. The recalled fallen-flower quotation is unconfirmed and is intentionally not published as Josh’s verbatim words.
 

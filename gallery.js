@@ -52,7 +52,7 @@ function makePhoto(photo, featured = false) {
 const featured = photos.find(photo => photo.id === gallery.featuredId) || photos[0];
 $('hero').replaceWith(Object.assign(makePhoto(featured, true), {id: 'hero'}));
 $('gallery-title').textContent = gallery.title;
-photos.forEach(photo => $('plates').append(makePhoto(photo)));
+photos.filter(photo => photo.id !== featured.id).forEach(photo => $('plates').append(makePhoto(photo)));
 
 function showPhoto(index) {
   current = (index + photos.length) % photos.length;

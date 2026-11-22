@@ -10,11 +10,11 @@ JMD.media is a photography site built around looking closely. These standards pr
 - Keep the brand distinct from a gallery title. The current gallery is **Life Might Surprise You**.
 - Each future gallery has its own title, chosen featured photograph, and collection. The design must accommodate more galleries without making the current presentation feel like an empty directory.
 - Keep all **27 photographs** in the current collection. Do not announce the total photograph count in the public interface; individual image numbers remain.
-- **At the edge** is the current featured photograph. It appears in both the opening hero and the collection, and supplies the imagery for the gallery share card. Its hero appearance does not remove it from the collection. Place it at **number 8** in the collection, moved from number 6. Reference its stable image identifier or asset rather than its changing position.
+- **At the edge** is the current featured photograph. It is **number 1** in the collection and appears only once on the page as the opening image. The wall below continues with photographs 2–27, without repeating the first image. It also supplies the gallery share image. Preserve the relative order of the other photographs. Reference its stable image identifier or asset rather than its changing position.
 
 ## Image hierarchy and gallery wall
 
-The photographs lead. Present the collection as a single vertical sequence with restrained framing and quiet interface elements. Keep one photograph per row on phones and narrower viewports. The 21 November review permits a two-column wall on wide screens when each complete image remains generous and legible; this supersedes the earlier desktop prohibition. The current preview starts two columns at 1280 CSS pixels. Keep the featured image full-width and preserve the collection order and every photograph’s aspect ratio. Keep titles and other text subtle but legible. Avoid large text panels, oversized captions, or decorative structures that compete with the work. Place a tiny, subtle title and number beneath each wall image, with readable contrast.
+The photographs lead. Present the collection as a gallery wall with restrained framing and quiet interface elements. Keep one photograph per row on phones and narrower viewports. The 21 November review permits a two-column wall on wide screens when each complete image remains generous and legible; this supersedes the earlier desktop prohibition. The current preview starts two columns at 1280 CSS pixels. Keep the featured image full-width and preserve the collection order and every photograph’s aspect ratio. Keep titles and other text subtle but legible. Avoid large text panels, oversized captions, or decorative structures that compete with the work. Place a tiny, subtle title and number beneath each wall image, with readable contrast.
 
 The hero is an introduction to the gallery, not a substitute for browsing the collection. Preserve the character of each photograph and use its orientation intentionally rather than forcing every image into the same shape. The opening sequence is JMD.media, Look Up!, Life Might Surprise You, the featured photograph, then the wall. Do not add introductory prose or a category table of contents. Make the featured section clearly identifiable with a modest “Featured photograph” label and its title left-aligned. Use an intentional boundary and spacing before the collection; overly subtle rules alone are insufficient.
 
@@ -111,7 +111,7 @@ These criteria translate the design direction into testable behavior. They are i
 # Review before release
 
 - Confirm JMD.media, Look Up!, and Life Might Surprise You have distinct roles and correct spelling. Verify the chosen typography without assuming all caps.
-- Confirm all 27 current photographs are present, including At the edge in the collection as well as the hero.
+- Confirm all 27 current photographs are present exactly once on the page, with At the edge first; all 27 remain in viewer navigation.
 - Inspect the image wall, viewer, About, and Inquiries on phone, iPad mini, and desktop, including tablet rotation.
 - Check light, dark, and system behavior; keyboard focus; touch controls; long descriptions; and reduced motion.
 - Confirm descriptions and annotations remain off-image, and personal annotations accurately reflect Josh’s words.
@@ -125,10 +125,15 @@ These criteria translate the design direction into testable behavior. They are i
 - Header: rarely or never changes.
 - Brand tagline: **Look Up!**, almost never changes. Its existing title case and exclamation mark remain. Use subtle tracking (`.015em`) and a small optical gap (`.025em`) between the two o letters.
 - Campaign slogan: **Light, Unscripted**, capital L and U, comma, no final period. Replaces Life Might Surprise You and may change seasonally or yearly.
-- Featured picture title: changes with each gallery; currently **At the edge**. The featured photograph and all 27 photographs remain unchanged. The existing featured label is semibold to clarify the intentional repeat in the wall.
+- Featured picture title: changes with each gallery; currently **At the edge**. The featured photograph and all 27 photographs remain unchanged. The featured label remains modest; the image now opens the collection once, with no repeat in the wall.
 - The stable internal gallery ID remains unchanged to preserve compatibility.
 
 
 ## 21 November 2026 review: responsive wall and fixed viewer navigation
 
 The earlier one-photo-per-row rule remains mandatory on phones. The owner now permits paired photographs on sufficiently wide screens; the current preview uses a 1280px breakpoint, without changing photo order, aspect ratios, the featured image, or phone image sizing. Previous/next and Close stay anchored at the viewer’s bottom-right safe area regardless of photograph dimensions. Long captions may scroll while controls remain in place. Simulated viewport checks must be distinguished from physical-device review.
+
+
+## 21 November 2026 decision: a single opening photograph
+
+Two viewers interpreted the repeated featured photograph as an accidental duplicate. Use the selected featured photograph as collection item 1 and the full-width opening image, without repeating it below. All 27 photographs remain available, and the other 26 retain their relative order. Keep the selected photograph as the share image, with card wording limited to JMD.media · LOOK UP! The earlier instruction to show the featured photograph twice and place it eighth is superseded.
