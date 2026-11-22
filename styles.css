@@ -56,7 +56,7 @@
 :root[data-theme=dark] .brand .logo-ink{display:none}:root[data-theme=dark] .brand .logo-light{display:block}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]) .brand .logo-ink{display:none}:root:not([data-theme=light]) .brand .logo-light{display:block}}
 .mast{padding:12px 0}.opening-line{margin-bottom:8px}.opening h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(44px,5.4vw,74px);font-weight:400;letter-spacing:-.035em;line-height:1.08}.gallery-heading{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(18px,2vw,25px);letter-spacing:0;margin-bottom:24px}
-.hero{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0 12px}.hero .caption{justify-content:flex-start;padding-top:10px}.collection{padding-top:24px}
+.hero{border-top:1px solid var(--line);padding:16px 0 12px}.hero .caption{justify-content:flex-start;padding-top:10px}.collection{padding-top:24px}
 @media(max-width:700px){.brand img{width:82px}.mast{min-height:76px;padding:8px 0}.hero{padding:12px 0 10px}.collection{padding-top:20px}.gallery-heading{margin-bottom:20px}}
 
 /* Keep the proven image size; use the former top-control space for its short caption. */
@@ -68,7 +68,7 @@
 .viewer-stage{display:block;width:100%;height:auto;min-height:0;max-height:calc(100dvh - 106px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));aspect-ratio:3/2}
 .viewer-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .viewer-bottom{padding:4px 6px;row-gap:0;align-content:start;min-height:0}#viewer-description{margin:0;padding:0;font-size:13px;line-height:1.35;white-space:normal}#viewer-note{margin:4px 0 0;padding:0;max-width:65ch;font-size:13px;line-height:1.35;white-space:pre-line}
-.hero{padding-bottom:20px;border-bottom-color:var(--soft)}.hero .caption{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;padding-top:12px;justify-content:start}.feature-label{grid-column:1/-1;font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--soft);margin-bottom:2px}.collection{padding-top:42px}
+.hero{padding-bottom:20px}.hero .caption{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;padding-top:12px;justify-content:start}.feature-label{grid-column:1/-1;font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--soft);margin-bottom:2px}.collection{padding-top:42px}
 @media(max-width:700px){.hero{padding-bottom:18px}.collection{padding-top:34px}}
 
 /* Regression fix: center the image + caption as one composition. */
@@ -83,7 +83,7 @@
 /* Quietly open the brand line, with a small optical gap between the two o letters. */
 .opening h1{letter-spacing:.015em;font-kerning:normal}
 .tagline-first-o{margin-right:.025em}
-/* Clarify that the repeated hero is an intentional featured selection. */
+/* Keep the opening photograph identifiable within the gallery sequence. */
 .hero .feature-label{font-weight:600}
 
 /* Wide gallery wall: phones retain the original single-column presentation. */
