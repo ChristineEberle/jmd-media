@@ -85,3 +85,13 @@
 .tagline-first-o{margin-right:.025em}
 /* Clarify that the repeated hero is an intentional featured selection. */
 .hero .feature-label{font-weight:600}
+
+/* Wide gallery wall: phones retain the original single-column presentation. */
+@media (min-width:1280px){
+ .plates{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1680px;column-gap:clamp(32px,4vw,72px);row-gap:clamp(48px,5vw,88px);align-items:center}
+}
+
+/* Keep navigation targets fixed while photographs retain their natural proportions. */
+.viewer[open]{padding-bottom:calc(60px + env(safe-area-inset-bottom,0px));scroll-padding-bottom:calc(60px + env(safe-area-inset-bottom,0px))}
+.viewer-bottom{grid-template-columns:minmax(0,1fr)}
+.viewer-controls{position:fixed;right:max(8px,env(safe-area-inset-right,0px));bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;gap:6px;margin:0;padding:4px;background:var(--viewer)}

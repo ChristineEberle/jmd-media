@@ -28,7 +28,7 @@ function makePhoto(photo, featured = false) {
     const longestEdge = Math.max(photo.width, photo.height);
     const webpWidth = maxEdge => Math.round(photo.width * Math.min(1, maxEdge / longestEdge));
     img.srcset = `${photo.id}-s.webp ${webpWidth(1100)}w, ${photo.id}.webp ${webpWidth(2400)}w`;
-    img.sizes = 'auto, (max-width: 700px) 96vw, min(96vw, 1120px)';
+    img.sizes = 'auto, (min-width: 1280px) min(46vw, 804px), (max-width: 700px) 96vw, min(96vw, 1120px)';
     img.loading = 'lazy';
     img.decoding = 'async';
     figure.style.setProperty('--photo-ratio', photo.width / photo.height);

@@ -14,7 +14,7 @@ JMD.media is a photography site built around looking closely. These standards pr
 
 ## Image hierarchy and gallery wall
 
-The photographs lead. Present the collection as a single vertical sequence with restrained framing and quiet interface elements. Give each photograph its own row at every screen size. Never use side-by-side photos, justified rows, or a multi-column grid. Keep titles and other text subtle but legible. Avoid large text panels, oversized captions, or decorative structures that compete with the work. Place a tiny, subtle title and number beneath each wall image, with readable contrast.
+The photographs lead. Present the collection as a single vertical sequence with restrained framing and quiet interface elements. Keep one photograph per row on phones and narrower viewports. The 21 November review permits a two-column wall on wide screens when each complete image remains generous and legible; this supersedes the earlier desktop prohibition. The current preview starts two columns at 1280 CSS pixels. Keep the featured image full-width and preserve the collection order and every photograph’s aspect ratio. Keep titles and other text subtle but legible. Avoid large text panels, oversized captions, or decorative structures that compete with the work. Place a tiny, subtle title and number beneath each wall image, with readable contrast.
 
 The hero is an introduction to the gallery, not a substitute for browsing the collection. Preserve the character of each photograph and use its orientation intentionally rather than forcing every image into the same shape. The opening sequence is JMD.media, Look Up!, Life Might Surprise You, the featured photograph, then the wall. Do not add introductory prose or a category table of contents. Make the featured section clearly identifiable with a modest “Featured photograph” label and its title left-aligned. Use an intentional boundary and spacing before the collection; overly subtle rules alone are insufficient.
 
@@ -50,7 +50,7 @@ Do not use print-focused wording or present sales, prices, checkout, or payments
 
 ## Devices and themes
 
-Use one photograph per row on phones, tablets, laptops, and desktops in either orientation. Preserve aspect ratios. Fill the gallery width on phones and use the larger canvas for more generous image sizes and margins on wider screens.
+Phones remain one photograph per row in portrait and landscape. The current preview keeps a single column below 1280 CSS pixels and uses two columns from 1280px upward, with a maximum wall width of 1680px and generous gaps. Preserve aspect ratios without cropping or stretching. The featured image remains full-width. This is a reviewable wide-screen layout, not a change to the phone gallery’s sizing.
 
 Support device theme choices without making the theme interface compete with the photographs. Text, controls, logos, and viewer surfaces need to remain clear in each supported appearance.
 
@@ -90,9 +90,9 @@ Use the accent sparingly for focus or small details. Do not recolor the photogra
 
 These criteria translate the design direction into testable behavior. They are implementation recommendations rather than additional editorial or brand decisions.
 
-- **Viewer:** preserve the complete photograph with a contain-style fit and retain the image size approved in the actual iPhone review. Keep previous, next, and close controls minimal and discoverable; support keyboard and touch browsing without instructional text or dependence on hidden gestures. Reclaim unused space for short off-image details in the same viewport where possible; do not automatically shrink the image. Allow scrolling when content or device constraints require it. Restore the visitor’s place on closing.
+- **Viewer:** preserve the complete photograph with a contain-style fit and retain the image size approved in the actual iPhone review. Keep previous, next, and close controls minimal and discoverable in a fixed position relative to the viewport. Previous/next targets must not move when photo orientation, size, or caption length changes. Reserve space above the controls so they do not cover the photograph or last caption lines. Support keyboard and touch browsing without instructional text or dependence on hidden gestures. Reclaim unused space for short off-image details in the same viewport where possible; do not automatically shrink the image. Allow scrolling when content or device constraints require it. Restore the visitor’s place on closing.
 - **Accessibility:** maintain readable contrast, visible keyboard focus, meaningful image text alternatives, and sufficiently large touch targets. Do not make important controls hover-only. Respect reduced-motion settings.
-- **Responsive layout:** keep one photograph per row at every breakpoint. Verify the sequence on phone, tablet, laptop, and wide desktop viewports. Scale the images and spacing with the viewport and preserve each aspect ratio.
+- **Responsive layout:** verify one column on phone portrait/landscape and all widths below 1280px; verify two columns on wide screens from 1280px upward. Check the transition, mixed photo orientations, complete images, original order, and no overflow. Preserve the phone gallery and full-width featured photograph.
 - **Themes:** offer System, Light, and Dark behavior, remember an explicit choice, and follow the device appearance in System mode. Exact labels and control treatment can remain discreet.
 - **Image delivery:** use responsive image sizes, reserve image dimensions to prevent layout jumps, and prioritize the featured image while loading later gallery images efficiently.
 - **Gallery data:** represent each gallery with a stable identifier, title, featured-image reference, ordered collection, and share metadata. Reuse each photograph’s record across hero and collection so titles, descriptions, and annotations do not drift.
@@ -127,3 +127,8 @@ These criteria translate the design direction into testable behavior. They are i
 - Campaign slogan: **Light, Unscripted**, capital L and U, comma, no final period. Replaces Life Might Surprise You and may change seasonally or yearly.
 - Featured picture title: changes with each gallery; currently **At the edge**. The featured photograph and all 27 photographs remain unchanged. The existing featured label is semibold to clarify the intentional repeat in the wall.
 - The stable internal gallery ID remains unchanged to preserve compatibility.
+
+
+## 21 November 2026 review: responsive wall and fixed viewer navigation
+
+The earlier one-photo-per-row rule remains mandatory on phones. The owner now permits paired photographs on sufficiently wide screens; the current preview uses a 1280px breakpoint, without changing photo order, aspect ratios, the featured image, or phone image sizing. Previous/next and Close stay anchored at the viewer’s bottom-right safe area regardless of photograph dimensions. Long captions may scroll while controls remain in place. Simulated viewport checks must be distinguished from physical-device review.
