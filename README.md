@@ -21,6 +21,8 @@ Descriptions are restored from the earlier public preview where verified; the fo
 
 ## Social previews
 
+For the first gallery, the card wording is only **JMD.media · LOOK UP!**, with a spaced separator. Keep the featured photograph dominant. Do not include the photograph title or the campaign slogan in card text; naming future galleries is a later decision. The site has no Share Gallery button. Recipient apps control the card typography and layout, so metadata does not guarantee exact spacing in iMessage.
+
 The build resolves OG/Twitter image URLs against `VERCEL_URL`, or an explicit `SITE_URL`, or the verified existing production domain `https://jmd-media.vercel.app`. The card uses the unmodified `06.webp` photograph, not the canopy or spillway. The social image is versioned in metadata. Social apps choose their own crop, caching, card frame and theme. They cannot reliably adapt a shared static image to each recipient’s light/dark setting. Preview protection can prevent social crawlers from fetching a preview deployment; do not weaken protection automatically.
 
 ## Verification

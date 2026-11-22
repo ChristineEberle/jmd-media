@@ -14,6 +14,8 @@ for (const file of fs.readdirSync('.')) {
  if (/\.(webp|png|jpg|css)$/.test(file) || ['gallery.js','gallery-data.js','site.js','contact.js'].includes(file)) fs.copyFileSync(file,path.join('dist',file));
 }
 for (const file of ['index.html', 'about.html', 'inquiries.html']) {
- const html = fs.readFileSync(file, 'utf8').replaceAll('__SOCIAL_IMAGE_URL__', new URL('/06.webp?v=gallery-wall-1', url).href);
+ const html = fs.readFileSync(file, 'utf8')
+  .replaceAll('__SOCIAL_IMAGE_URL__', new URL('/06.webp?v=gallery-wall-1', url).href)
+  .replaceAll('__GALLERY_URL__', new URL('/', url).href);
  fs.writeFileSync(path.join('dist', file), html);
 }

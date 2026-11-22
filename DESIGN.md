@@ -56,6 +56,8 @@ Support device theme choices without making the theme interface compete with the
 
 ## Share card
 
+**21 November 2026 clarification:** For this first gallery, the visible card wording is only **JMD.media · LOOK UP!**, using a spaced separator. Keep the featured photograph prominent, but omit its title and the campaign slogan from card text. Naming galleries on the card is a later decision. Do not add a Share Gallery button. The recipient app controls the surrounding typography and final spacing.
+
 The share card is image-dominant and uses **At the edge** for the current gallery. Brand and gallery identification should be secondary to the photograph. Future galleries should use their own chosen featured image. Use only a neutral charcoal or the site’s white/light-neutral background. Never use a green card background or apply a green tint. Green that naturally appears within the photograph is fine. This card palette does not force the site into light mode: retain device preference and the theme switch. Josh’s approval of the final card remains pending. Do not put a logo on the share card: no logo overlay or logo panel. Keep At the edge photo-dominant and put branding in share metadata. Photo impact is paramount.
 
 The site controls its share image and metadata, but recipient apps choose the card layout, crop, image size, and whether a preview appears. Judge the source image on its own and test actual previews where possible. Do not promise identical rendering in every messaging or social app.
@@ -94,7 +96,7 @@ These criteria translate the design direction into testable behavior. They are i
 - **Themes:** offer System, Light, and Dark behavior, remember an explicit choice, and follow the device appearance in System mode. Exact labels and control treatment can remain discreet.
 - **Image delivery:** use responsive image sizes, reserve image dimensions to prevent layout jumps, and prioritize the featured image while loading later gallery images efficiently.
 - **Gallery data:** represent each gallery with a stable identifier, title, featured-image reference, ordered collection, and share metadata. Reuse each photograph’s record across hero and collection so titles, descriptions, and annotations do not drift.
-- **Share metadata:** provide a reachable social image and accurate gallery title and description. Keep the photograph’s main subject safe under common crops. Validate both fetched metadata and actual app behavior when available.
+- **Share metadata:** provide a reachable social image and the first-gallery card wording **JMD.media · LOOK UP!** without a photograph title or campaign slogan. Keep the photograph’s main subject safe under common crops. Validate both fetched metadata and actual app behavior when available.
 
 # Open decisions and provisional details
 
