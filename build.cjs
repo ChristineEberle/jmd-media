@@ -11,7 +11,7 @@ const url = new URL(origin);
 if (url.protocol !== 'https:' && url.hostname !== 'localhost') throw new Error('SITE_URL must use HTTPS');
 fs.mkdirSync('dist', { recursive: true });
 for (const file of fs.readdirSync('.')) {
- if (/\.(webp|png|jpg|css)$/.test(file) || ['gallery.js','gallery-data.js','site.js','contact.js','share.js'].includes(file)) fs.copyFileSync(file,path.join('dist',file));
+ if (/\.(webp|png|jpg|css)$/.test(file) || ['gallery.js','gallery-data.js','site.js','contact.js'].includes(file)) fs.copyFileSync(file,path.join('dist',file));
 }
 for (const file of ['index.html', 'about.html', 'inquiries.html']) {
  const html = fs.readFileSync(file, 'utf8')

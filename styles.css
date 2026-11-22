@@ -85,14 +85,3 @@
 .tagline-first-o{margin-right:.025em}
 /* Clarify that the repeated hero is an intentional featured selection. */
 .hero .feature-label{font-weight:600}
-
-/* Gallery sharing stays a quiet utility alongside the theme control. */
-.mast-utilities{display:flex;align-items:center;gap:8px;flex:none}
-.share-gallery{display:grid;place-items:center;min-width:44px;min-height:44px;border:0;background:transparent;color:var(--link);padding:10px;border-radius:50%}
-.share-gallery:hover{background:var(--line)}.share-gallery:disabled{opacity:.6;cursor:wait}
-.share-feedback{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:12px;padding:16px;margin-top:16px;border:1px solid var(--line);max-width:620px;margin-left:auto;font-size:14px;line-height:1.5}
-.share-feedback p{margin:0 0 10px}.share-feedback label{display:block;font-size:13px;margin-bottom:5px}.share-link-row{display:flex;gap:8px;flex-wrap:wrap}
-.share-link-row input{flex:1 1 180px;min-width:0;width:100%;min-height:44px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:10px;font:inherit}
-.share-link-row button{min-height:44px;border:1px solid var(--link);padding:9px 12px;background:transparent;color:var(--link);font:inherit}
-.share-link-row input:focus-visible{outline:2px solid var(--link);outline-offset:2px}.share-dismiss{width:44px;min-height:44px;align-self:start;border:0;background:transparent;font-size:24px}
-@media(max-width:700px){.gallery-mast{column-gap:10px;flex-wrap:wrap}.gallery-mast nav{gap:12px}.mast-utilities{gap:4px}.share-feedback{padding:12px;gap:4px}}
