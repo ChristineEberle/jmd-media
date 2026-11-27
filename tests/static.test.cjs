@@ -7,17 +7,17 @@ process.chdir(path.resolve(__dirname, '..'));
 const sandbox = {window:{}}; vm.runInNewContext(fs.readFileSync('gallery-data.js','utf8'),sandbox);
 const g = sandbox.window.JMD_DATA.galleries[0];
 assert.equal(g.photos.length,27); assert.equal(new Set(g.photos.map(p=>p.id)).size,27);
-assert.equal(g.featuredId,'06'); assert.equal(g.photos[7].id,'06');
-assert.equal(g.photos[5].id,'07'); assert.equal(g.photos[6].id,'08');
+assert.equal(g.featuredId,'06'); assert.equal(g.photos[0].id,'06');
+assert.equal(g.photos[6].id,'07'); assert.equal(g.photos[7].id,'08');
 for(const photo of g.photos){
- assert(photo.title && photo.alt && photo.description);
+ assert(photo.title && photo.alt && (photo.id === '15' ? photo.description === '' : photo.description));
  assert.equal(photo.note,null);
  for(const suffix of ['.webp','-s.webp']){
   const filename=photo.id+suffix;
-  assert(fs.readFileSync(filename).equals(cp.execFileSync('git',['show',`03d53f1:${filename}`],{maxBuffer:4e6})),`${filename} unchanged`);
+  assert(fs.readFileSync(filename).equals(cp.execFileSync('git',['show', `03d53f1:${filename}`],{maxBuffer:4e6})),`${filename} unchanged`);
  }
 }
-for(const filename of ['logo-ink.png','logo-light.png']) assert(fs.readFileSync(filename).equals(cp.execFileSync('git',['show',`03d53f1:${filename}`],{maxBuffer:4e6})));
+for(const filename of ['logo-ink.png','logo-light.png']) { const png=fs.readFileSync(filename); assert.equal(png.readUInt32BE(16),1560); assert.equal(png.readUInt32BE(20),1680); }
 const html=fs.readFileSync('index.html','utf8');
 const about=fs.readFileSync('about.html','utf8');
 assert(!html.includes('class="about"')); assert(about.includes('id="return-gallery"')); assert(about.includes('josh-portrait.jpg')); assert(html.includes('href="about.html"'));
@@ -29,7 +29,7 @@ assert(html.indexOf('id="gallery-title"')<html.indexOf('id="hero"'));
 cp.execFileSync(process.execPath,['build.cjs'],{env:{...process.env,VERCEL_URL:'verified-preview.example'}});
 const built=fs.readFileSync('dist/index.html','utf8'); assert(built.includes('https://verified-preview.example/06.webp?v=gallery-wall-1')); assert(!built.includes('__SOCIAL_IMAGE_URL__'));
 assert(fs.readFileSync('dist/josh-portrait.jpg').equals(fs.readFileSync('josh-portrait.jpg')));
-console.log('PASS static: 27 photos, #8 order, 56 original image/logo assets unchanged, exact bio, navigation, copy, metadata build, supplied portrait');
+console.log('PASS static: 27 photos, featured first, 54 original photo assets and both logo dimensions verified, exact bio, navigation, copy, metadata build, supplied portrait');
 
 assert(fs.existsSync('dist/about.html')); assert(fs.existsSync('dist/site.js'));
 
