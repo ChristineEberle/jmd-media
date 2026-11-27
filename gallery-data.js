@@ -14,7 +14,7 @@ window.JMD_DATA = {
           "title": "At the edge",
           "alt": "A surfer at a rocky ocean edge, watched by a crowd.",
           "note": null,
-          "description": "The crowd watches from the rocks. Only the surfer can read the water for himself and trust the hours it took to learn how."
+          "description": "Board in hand, the surfer leans out over the rock. He has to trust his read of the swell below."
         },
         {
           "id": "01",
@@ -23,7 +23,7 @@ window.JMD_DATA = {
           "title": "Warp Speed",
           "alt": "Sunbeams radiate through a dense green canopy.",
           "note": null,
-          "description": "The trees stand still. Follow the streaks of sunlight toward the center and it feels as though you’re hurtling through them."
+          "description": "Sunlight streaks toward the camera through a gap in the canopy."
         },
         {
           "id": "02",
@@ -32,34 +32,34 @@ window.JMD_DATA = {
           "title": "Copper spillway",
           "alt": "Copper reflections curve over falling water beside deep blue ripples.",
           "note": null,
-          "description": "At Vasona Reservoir, blue water folds over the lip of the spillway in a sheet of copper."
+          "description": "Copper-colored light on the spillway at Vasona Reservoir."
         },
         {
           "id": "03",
           "width": 7952,
           "height": 5304,
-          "title": "Where the Pier Stood",
+          "title": "Under the Old Pier",
           "alt": "Warm light and splashing water beneath repeating pier columns.",
           "note": null,
-          "description": "Sunlight slips between the pilings and catches a breaking wave. The pier is gone now."
+          "description": "A wave breaks between the pilings. This pier is gone now."
         },
         {
           "id": "04",
           "width": 8498,
           "height": 5311,
-          "title": "Capitola, Twice",
+          "title": "Capitola Waterfront",
           "alt": "Colorful waterfront buildings and clouds reflected in still water.",
           "note": null,
-          "description": "Colorful waterfront buildings and clouds reflected in still water."
+          "description": "The waterfront houses and palm trees reflect in the still water at Capitola."
         },
         {
           "id": "05",
           "width": 5474,
           "height": 2737,
-          "title": "Capitola Through the Cement Ship",
+          "title": "Capitola at Night, Through the Cement Ship",
           "alt": "Town lights coming on across the bay as the clouds catch fire.",
           "note": null,
-          "description": "Across the bay, Capitola begins to light up. The view is framed by what little remains of the historic Cement Ship."
+          "description": "The lights of Capitola, seen through what remains of the historic Cement Ship."
         },
         {
           "id": "07",
@@ -68,7 +68,7 @@ window.JMD_DATA = {
           "title": "Suspended at sunset",
           "alt": "Silhouetted chairlift riders suspended against a golden sunset.",
           "note": null,
-          "description": "High above the Santa Cruz Beach Boardwalk, chairlift riders have the last of the sunlight to themselves."
+          "description": "The chairlift at the Santa Cruz Beach Boardwalk, just before dark."
         },
         {
           "id": "08",
@@ -77,7 +77,7 @@ window.JMD_DATA = {
           "title": "Night passengers",
           "alt": "A black-and-white city scene with passengers framed by tram windows.",
           "note": null,
-          "description": "From the driver’s seat of a blue BMW convertible, Josh caught the metro passengers framed in their own windows."
+          "description": "Josh photographed the metro passengers from the driver’s seat of a blue BMW convertible."
         },
         {
           "id": "09",
@@ -95,7 +95,7 @@ window.JMD_DATA = {
           "title": "Before the Dance",
           "alt": "A contemplative monochrome portrait illuminated by a window.",
           "note": null,
-          "description": "Scarlett in the window light, getting ready for a school dance."
+          "description": "Scarlett getting ready for her school dance."
         },
         {
           "id": "11",
@@ -104,7 +104,7 @@ window.JMD_DATA = {
           "title": "Athena",
           "alt": "A dog with differently colored eyes in sculpted light.",
           "note": null,
-          "description": "The light catches both of Athena’s eyes. Each is a different color, a trait called heterochromia."
+          "description": "One blue eye, one amber. Athena has heterochromia."
         },
         {
           "id": "12",
@@ -113,7 +113,7 @@ window.JMD_DATA = {
           "title": "Eye to eye",
           "alt": "A crested gecko resting in a hand.",
           "note": null,
-          "description": "A crested gecko rests in the curve of a hand."
+          "description": "A crested gecko rests its chin on a fingertip."
         },
         {
           "id": "13",
@@ -122,7 +122,7 @@ window.JMD_DATA = {
           "title": "Mantis encounter",
           "alt": "A green praying mantis against a softly blurred green background.",
           "note": null,
-          "description": "At first there’s only green. Then the outline of a praying mantis resolves, so precisely matched to its surroundings that spotting it feels like a privilege."
+          "description": "A praying mantis, head turned toward the lens, forelegs folded against its chest."
         },
         {
           "id": "14",
@@ -167,7 +167,7 @@ window.JMD_DATA = {
           "title": "A Tasty Morsel",
           "alt": "A white egret faces forward above water, droplets falling from its beak.",
           "note": null,
-          "description": "A snowy egret comes up with shellfish. Water still drips from its bill."
+          "description": "A snowy egret with the shellfish it just caught."
         },
         {
           "id": "19",
@@ -176,7 +176,7 @@ window.JMD_DATA = {
           "title": "The Feisty Couple",
           "alt": "Two hawks face one another among sunlit branches.",
           "note": null,
-          "description": "These two red-tailed hawks went on to raise their young in the photographer’s backyard."
+          "description": "“These beautiful red-tailed hawks subsequently mated and raised their crew in our backyard!” — Josh"
         },
         {
           "id": "20",
@@ -194,7 +194,7 @@ window.JMD_DATA = {
           "title": "Red Barn",
           "alt": "A red barn beneath mist, trees and a glowing horizon.",
           "note": null,
-          "description": "Light erupts from a fissure in the sky to play tag with a red barn trying to hide in the fog."
+          "description": "Light erupts from a fissure in the sky to play tag with an iconic red barn attempting to hide in the fog."
         },
         {
           "id": "22",
@@ -221,7 +221,7 @@ window.JMD_DATA = {
           "title": "The Moon Looks On",
           "alt": "A small moon and aircraft beside long parallel trails in a blue vertical sky.",
           "note": null,
-          "description": "Contrails divide the sky. Off to one side, the moon watches."
+          "description": "Contrails divide the sky while the moon looks on."
         },
         {
           "id": "25",
@@ -230,7 +230,7 @@ window.JMD_DATA = {
           "title": "SpaceX at Sunset",
           "alt": "A luminous curved sky trail against deep blue.",
           "note": null,
-          "description": "A SpaceX launch leaves a luminous curve across the deepening blue."
+          "description": "The sun catches the exhaust plume from a SpaceX launch."
         },
         {
           "id": "26",
@@ -248,7 +248,7 @@ window.JMD_DATA = {
           "title": "Fallen pink flower",
           "alt": "A fallen pink flower rests alone on rough dark pavement.",
           "note": null,
-          "description": "A fallen pink rose rests on coarse asphalt. Every edge of the pavement seems sharper beside the soft folds of its petals."
+          "description": "Pale pink petals against black asphalt."
         }
       ]
     }
