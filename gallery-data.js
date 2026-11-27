@@ -14,61 +14,61 @@ window.JMD_DATA = {
           "title": "At the edge",
           "alt": "A surfer at a rocky ocean edge, watched by a crowd.",
           "note": null,
-          "description": "Board in hand, the surfer leans out over the rock. He has to trust his read of the swell below."
+          "description": "The same ocean. A different relationship to the edge."
         },
         {
           "id": "01",
           "width": 9504,
           "height": 6336,
-          "title": "Warp Speed",
+          "title": "Standing still at light speed",
           "alt": "Sunbeams radiate through a dense green canopy.",
           "note": null,
-          "description": "Sunlight streaks toward the camera through a gap in the canopy."
+          "description": "Going somewhere without moving at all."
         },
         {
           "id": "02",
           "width": 4128,
           "height": 5504,
-          "title": "Copper spillway",
+          "title": "Where the mirror breaks",
           "alt": "Copper reflections curve over falling water beside deep blue ripples.",
           "note": null,
-          "description": "Copper-colored light on the spillway at Vasona Reservoir."
+          "description": "The water carries a world of reflections right up to the moment it lets them go."
         },
         {
           "id": "03",
           "width": 7952,
           "height": 5304,
-          "title": "Under the Old Pier",
+          "title": "Between the lines",
           "alt": "Warm light and splashing water beneath repeating pier columns.",
           "note": null,
-          "description": "A wave breaks between the pilings. This pier is gone now."
+          "description": "The sea reads it all"
         },
         {
           "id": "04",
           "width": 8498,
           "height": 5311,
-          "title": "Capitola Waterfront",
+          "title": "As above",
           "alt": "Colorful waterfront buildings and clouds reflected in still water.",
           "note": null,
-          "description": "The waterfront houses and palm trees reflect in the still water at Capitola."
+          "description": "So below!"
         },
         {
           "id": "05",
           "width": 5474,
           "height": 2737,
-          "title": "Capitola at Night, Through the Cement Ship",
+          "title": "When the lights come on",
           "alt": "Town lights coming on across the bay as the clouds catch fire.",
           "note": null,
-          "description": "The lights of Capitola, seen through what remains of the historic Cement Ship."
+          "description": "From the Cement Ship, you can see the town’s lights take over from the sun."
         },
         {
           "id": "07",
           "width": 9504,
           "height": 6336,
-          "title": "Suspended at sunset",
+          "title": "One more ride",
           "alt": "Silhouetted chairlift riders suspended against a golden sunset.",
           "note": null,
-          "description": "The chairlift at the Santa Cruz Beach Boardwalk, just before dark."
+          "description": "From up here, there’s no hurry to get back down."
         },
         {
           "id": "08",
@@ -77,7 +77,7 @@ window.JMD_DATA = {
           "title": "Night passengers",
           "alt": "A black-and-white city scene with passengers framed by tram windows.",
           "note": null,
-          "description": "Josh photographed the metro passengers from the driver’s seat of a blue BMW convertible."
+          "description": "Two windows. Same ride, different nights."
         },
         {
           "id": "09",
@@ -86,16 +86,16 @@ window.JMD_DATA = {
           "title": "Après-skate",
           "alt": "Worn roller skates and loose laces on a brick surface.",
           "note": null,
-          "description": "Worn roller skates and loose laces on a brick surface."
+          "description": "The wheels have stopped. You can almost hear them anyway."
         },
         {
           "id": "10",
           "width": 2664,
           "height": 1499,
-          "title": "Before the Dance",
+          "title": "Before the dance",
           "alt": "A contemplative monochrome portrait illuminated by a window.",
           "note": null,
-          "description": "Scarlett getting ready for her school dance."
+          "description": "The dance is still ahead of her. This part is hers alone."
         },
         {
           "id": "11",
@@ -104,34 +104,34 @@ window.JMD_DATA = {
           "title": "Athena",
           "alt": "A dog with differently colored eyes in sculpted light.",
           "note": null,
-          "description": "One blue eye, one amber. Athena has heterochromia."
+          "description": "One blue eye, one amber. The look is unmistakably hers."
         },
         {
           "id": "12",
           "width": 2185,
           "height": 2185,
-          "title": "Eye to eye",
+          "title": "A little trust",
           "alt": "A crested gecko resting in a hand.",
           "note": null,
-          "description": "A crested gecko rests its chin on a fingertip."
+          "description": "A whole hand, and all the gecko needs is a fingertip."
         },
         {
           "id": "13",
           "width": 6667,
           "height": 5000,
-          "title": "Mantis encounter",
+          "title": "Who’s looking at whom?",
           "alt": "A green praying mantis against a softly blurred green background.",
           "note": null,
-          "description": "A praying mantis, head turned toward the lens, forelegs folded against its chest."
+          "description": "It takes a moment to find the mantis. It looks like the mantis found us first."
         },
         {
           "id": "14",
           "width": 1222,
           "height": 1222,
-          "title": "Inside the daffodil",
+          "title": "Room for one",
           "alt": "A honeybee working deep in the trumpet of a daffodil.",
           "note": null,
-          "description": "A honeybee working deep in the trumpet of a daffodil."
+          "description": "A daffodil is big enough to disappear into, if you’re the right size."
         },
         {
           "id": "15",
@@ -149,7 +149,7 @@ window.JMD_DATA = {
           "title": "Feather architecture",
           "alt": "Fine parallel strands and curves of a feather against darkness.",
           "note": null,
-          "description": "Fine parallel strands and curves of a feather against darkness."
+          "description": "The closer you get, the less a feather looks like one thing."
         },
         {
           "id": "17",
@@ -158,22 +158,22 @@ window.JMD_DATA = {
           "title": "A circle of feathers",
           "alt": "A preening duck curls into an almost circular form on blue water.",
           "note": null,
-          "description": "A preening duck curls into an almost circular form on blue water."
+          "description": "The duck tucks its head in. The water keeps moving."
         },
         {
           "id": "18",
           "width": 1474,
           "height": 1965,
-          "title": "A Tasty Morsel",
+          "title": "A tasty morsel",
           "alt": "A white egret faces forward above water, droplets falling from its beak.",
           "note": null,
-          "description": "A snowy egret with the shellfish it just caught."
+          "description": "A snowy egret comes up with lunch. The water gets the rest back."
         },
         {
           "id": "19",
           "width": 3197,
           "height": 2131,
-          "title": "The Feisty Couple",
+          "title": "The feisty couple",
           "alt": "Two hawks face one another among sunlit branches.",
           "note": null,
           "description": "“These beautiful red-tailed hawks subsequently mated and raised their crew in our backyard!” — Josh"
@@ -182,28 +182,28 @@ window.JMD_DATA = {
           "id": "20",
           "width": 7755,
           "height": 5170,
-          "title": "Weathering it",
+          "title": "Under the eaves",
           "alt": "A small wet bird shelters at the edge of a rain-soaked roof.",
           "note": null,
-          "description": "A small wet bird shelters at the edge of a rain-soaked roof."
+          "description": "Not quite out of the rain. Close enough."
         },
         {
           "id": "21",
           "width": 7138,
           "height": 4015,
-          "title": "Red Barn",
+          "title": "Red barn",
           "alt": "A red barn beneath mist, trees and a glowing horizon.",
           "note": null,
-          "description": "Light erupts from a fissure in the sky to play tag with an iconic red barn attempting to hide in the fog."
+          "description": "The whole sky opens up, and a little red barn still holds your eye."
         },
         {
           "id": "22",
           "width": 3713,
           "height": 2089,
-          "title": "Fog on the ridge",
+          "title": "Over the ridge",
           "alt": "Cloud spilling over the ridgeline above scattered houses.",
           "note": null,
-          "description": "Cloud spilling over the ridgeline above scattered houses."
+          "description": "The houses are still there, even as the hill they sit on disappears."
         },
         {
           "id": "23",
@@ -212,43 +212,43 @@ window.JMD_DATA = {
           "title": "One cloud",
           "alt": "A solitary sculptural cloud against a clear blue sky.",
           "note": null,
-          "description": "A solitary sculptural cloud against a clear blue sky."
+          "description": "One cloud, with sunset on one end and night on the other."
         },
         {
           "id": "24",
           "width": 2962,
           "height": 4441,
-          "title": "The Moon Looks On",
+          "title": "The moon looks on",
           "alt": "A small moon and aircraft beside long parallel trails in a blue vertical sky.",
           "note": null,
-          "description": "Contrails divide the sky while the moon looks on."
+          "description": "The contrails are new. The moon just makes them look temporary."
         },
         {
           "id": "25",
           "width": 3971,
           "height": 2234,
-          "title": "SpaceX at Sunset",
+          "title": "After the launch",
           "alt": "A luminous curved sky trail against deep blue.",
           "note": null,
-          "description": "The sun catches the exhaust plume from a SpaceX launch."
+          "description": "The rocket has moved on. The sun is still shining through what it left behind."
         },
         {
           "id": "26",
           "width": 6336,
           "height": 7920,
-          "title": "Storm over the neighborhood",
+          "title": "A word in edgewise",
           "alt": "A dramatic dark storm above a neighborhood, with a small rainbow segment.",
           "note": null,
-          "description": "A dramatic dark storm above a neighborhood, with a small rainbow segment."
+          "description": "The rainbow barely gets a word in."
         },
         {
           "id": "27",
           "width": 1894,
           "height": 2525,
-          "title": "Fallen pink flower",
+          "title": "Where it landed",
           "alt": "A fallen pink flower rests alone on rough dark pavement.",
           "note": null,
-          "description": "Pale pink petals against black asphalt."
+          "description": "Out of all that pavement, a few inches of pink."
         }
       ]
     }
