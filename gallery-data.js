@@ -59,7 +59,7 @@ window.JMD_DATA = {
           "title": "When the lights come on",
           "alt": "Town lights coming on across the bay as the clouds catch fire.",
           "note": null,
-          "description": "From the Cement Ship, you can see the town’s lights take over from the sun."
+          "description": "From what’s left of the Cement Ship, you can see Capitola’s lights take over from the sun."
         },
         {
           "id": "07",
@@ -68,7 +68,7 @@ window.JMD_DATA = {
           "title": "One more ride",
           "alt": "Silhouetted chairlift riders suspended against a golden sunset.",
           "note": null,
-          "description": "From up here, there’s no hurry to get back down."
+          "description": "Above the Boardwalk, there’s no hurry to get back down."
         },
         {
           "id": "08",
@@ -77,7 +77,7 @@ window.JMD_DATA = {
           "title": "Night passengers",
           "alt": "A black-and-white city scene with passengers framed by tram windows.",
           "note": null,
-          "description": "Two windows. Same ride, different nights."
+          "description": "Two windows, two different nights. Seen from the seat of a blue BMW convertible."
         },
         {
           "id": "09",
@@ -167,7 +167,7 @@ window.JMD_DATA = {
           "title": "A tasty morsel",
           "alt": "A white egret faces forward above water, droplets falling from its beak.",
           "note": null,
-          "description": "A snowy egret comes up with lunch. The water gets the rest back."
+          "description": "The snowy egret keeps the shellfish. The water gets the rest back."
         },
         {
           "id": "19",
@@ -230,7 +230,7 @@ window.JMD_DATA = {
           "title": "After the launch",
           "alt": "A luminous curved sky trail against deep blue.",
           "note": null,
-          "description": "The rocket has moved on. The sun is still shining through what it left behind."
+          "description": "The SpaceX rocket has moved on. The sun is still shining through what it left behind."
         },
         {
           "id": "26",
