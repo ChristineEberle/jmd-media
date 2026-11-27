@@ -29,10 +29,10 @@ window.JMD_DATA = {
           "id": "02",
           "width": 4128,
           "height": 5504,
-          "title": "Where the mirror breaks",
+          "title": "Mirror, mirror on the fall",
           "alt": "Copper reflections curve over falling water beside deep blue ripples.",
           "note": null,
-          "description": "The water carries a world of reflections right up to the moment it lets them go."
+          "description": "Water breaks and spills it all."
         },
         {
           "id": "03",
@@ -56,37 +56,37 @@ window.JMD_DATA = {
           "id": "05",
           "width": 5474,
           "height": 2737,
-          "title": "When the lights come on",
+          "title": "Through the Cement Ship",
           "alt": "Town lights coming on across the bay as the clouds catch fire.",
           "note": null,
-          "description": "From what’s left of the Cement Ship, you can see Capitola’s lights take over from the sun."
+          "description": "Capitola leaves the lights on. I leave the shutter open."
         },
         {
           "id": "07",
           "width": 9504,
           "height": 6336,
-          "title": "One more ride",
+          "title": "Nothing underfoot",
           "alt": "Silhouetted chairlift riders suspended against a golden sunset.",
           "note": null,
-          "description": "Above the Boardwalk, there’s no hurry to get back down."
+          "description": "You could walk across faster. But up here, your feet are dangling and you’ve got the whole sunset."
         },
         {
           "id": "08",
           "width": 9504,
           "height": 6336,
-          "title": "Night passengers",
+          "title": "When the light turns",
           "alt": "A black-and-white city scene with passengers framed by tram windows.",
           "note": null,
-          "description": "Two windows, two different nights. Seen from the seat of a blue BMW convertible."
+          "description": "Three paths meet for one shared second. Then the current pulls each away."
         },
         {
           "id": "09",
           "width": 6064,
           "height": 7580,
-          "title": "Après-skate",
+          "title": "After the last lap",
           "alt": "Worn roller skates and loose laces on a brick surface.",
           "note": null,
-          "description": "The wheels have stopped. You can almost hear them anyway."
+          "description": "All that speed, and now there’s time to untie the laces."
         },
         {
           "id": "10",
@@ -95,7 +95,7 @@ window.JMD_DATA = {
           "title": "Before the dance",
           "alt": "A contemplative monochrome portrait illuminated by a window.",
           "note": null,
-          "description": "The dance is still ahead of her. This part is hers alone."
+          "description": "A quiet minute before a room full of music."
         },
         {
           "id": "11",
@@ -104,34 +104,34 @@ window.JMD_DATA = {
           "title": "Athena",
           "alt": "A dog with differently colored eyes in sculpted light.",
           "note": null,
-          "description": "One blue eye, one amber. The look is unmistakably hers."
+          "description": "One blue, one amber. Neither looks away."
         },
         {
           "id": "12",
           "width": 2185,
           "height": 2185,
-          "title": "A little trust",
+          "title": "Handheld",
           "alt": "A crested gecko resting in a hand.",
           "note": null,
-          "description": "A whole hand, and all the gecko needs is a fingertip."
+          "description": "A fingertip makes a perfectly good lookout."
         },
         {
           "id": "13",
           "width": 6667,
           "height": 5000,
-          "title": "Who’s looking at whom?",
+          "title": "A turn of the head",
           "alt": "A green praying mantis against a softly blurred green background.",
           "note": null,
-          "description": "It takes a moment to find the mantis. It looks like the mantis found us first."
+          "description": "Green on green, until the mantis looks back."
         },
         {
           "id": "14",
           "width": 1222,
           "height": 1222,
-          "title": "Room for one",
+          "title": "Inside the daffodil",
           "alt": "A honeybee working deep in the trumpet of a daffodil.",
           "note": null,
-          "description": "A daffodil is big enough to disappear into, if you’re the right size."
+          "description": "From the outside, a flower. At bee scale, a whole room."
         },
         {
           "id": "15",
@@ -149,7 +149,7 @@ window.JMD_DATA = {
           "title": "Feather architecture",
           "alt": "Fine parallel strands and curves of a feather against darkness.",
           "note": null,
-          "description": "The closer you get, the less a feather looks like one thing."
+          "description": "From a distance it’s a single edge. Up close, it’s all edges."
         },
         {
           "id": "17",
@@ -158,7 +158,7 @@ window.JMD_DATA = {
           "title": "A circle of feathers",
           "alt": "A preening duck curls into an almost circular form on blue water.",
           "note": null,
-          "description": "The duck tucks its head in. The water keeps moving."
+          "description": "The duck folds itself into a circle. The water won’t hold still."
         },
         {
           "id": "18",
@@ -167,7 +167,7 @@ window.JMD_DATA = {
           "title": "A tasty morsel",
           "alt": "A white egret faces forward above water, droplets falling from its beak.",
           "note": null,
-          "description": "The snowy egret keeps the shellfish. The water gets the rest back."
+          "description": "The shellfish stays. The rest drips back into the water."
         },
         {
           "id": "19",
@@ -182,10 +182,10 @@ window.JMD_DATA = {
           "id": "20",
           "width": 7755,
           "height": 5170,
-          "title": "Under the eaves",
+          "title": "Waiting out the rain",
           "alt": "A small wet bird shelters at the edge of a rain-soaked roof.",
           "note": null,
-          "description": "Not quite out of the rain. Close enough."
+          "description": "A dry roof would be asking a lot. A place to stand will do."
         },
         {
           "id": "21",
@@ -194,7 +194,7 @@ window.JMD_DATA = {
           "title": "Red barn",
           "alt": "A red barn beneath mist, trees and a glowing horizon.",
           "note": null,
-          "description": "The whole sky opens up, and a little red barn still holds your eye."
+          "description": "Most of the light is on the horizon. The barn gets just enough."
         },
         {
           "id": "22",
@@ -203,7 +203,7 @@ window.JMD_DATA = {
           "title": "Over the ridge",
           "alt": "Cloud spilling over the ridgeline above scattered houses.",
           "note": null,
-          "description": "The houses are still there, even as the hill they sit on disappears."
+          "description": "You can still make out the houses. The ridge is another matter."
         },
         {
           "id": "23",
@@ -212,7 +212,7 @@ window.JMD_DATA = {
           "title": "One cloud",
           "alt": "A solitary sculptural cloud against a clear blue sky.",
           "note": null,
-          "description": "One cloud, with sunset on one end and night on the other."
+          "description": "Still day on one side. Already night on the other."
         },
         {
           "id": "24",
@@ -221,7 +221,7 @@ window.JMD_DATA = {
           "title": "The moon looks on",
           "alt": "A small moon and aircraft beside long parallel trails in a blue vertical sky.",
           "note": null,
-          "description": "The contrails are new. The moon just makes them look temporary."
+          "description": "The plane leaves two lines. The moon doesn’t leave a mark."
         },
         {
           "id": "25",
@@ -230,7 +230,7 @@ window.JMD_DATA = {
           "title": "After the launch",
           "alt": "A luminous curved sky trail against deep blue.",
           "note": null,
-          "description": "The SpaceX rocket has moved on. The sun is still shining through what it left behind."
+          "description": "The sky is dark here. The SpaceX plume is still in sunlight."
         },
         {
           "id": "26",
@@ -239,7 +239,7 @@ window.JMD_DATA = {
           "title": "A word in edgewise",
           "alt": "A dramatic dark storm above a neighborhood, with a small rainbow segment.",
           "note": null,
-          "description": "The rainbow barely gets a word in."
+          "description": "The storm takes up the sky. The rainbow gets a sliver."
         },
         {
           "id": "27",
@@ -248,7 +248,7 @@ window.JMD_DATA = {
           "title": "Where it landed",
           "alt": "A fallen pink flower rests alone on rough dark pavement.",
           "note": null,
-          "description": "Out of all that pavement, a few inches of pink."
+          "description": "A few inches of pink. The rest is asphalt."
         }
       ]
     }
