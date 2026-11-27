@@ -111,3 +111,8 @@
   :root:not([data-theme=light]) .pure-cat-mark-ink{display:none}
   :root:not([data-theme=light]) .pure-cat-mark-light{display:block}
 }
+
+/* Leave space for the complete caption above the fixed controls on phones. */
+@media (max-width:700px), (orientation:landscape) and (max-height:500px) and (pointer:coarse){
+  .viewer-stage{flex-shrink:1}
+}
