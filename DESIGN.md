@@ -137,3 +137,7 @@ The earlier one-photo-per-row rule remains mandatory on phones. The owner now pe
 ## 21 November 2026 decision: a single opening photograph
 
 Two viewers interpreted the repeated featured photograph as an accidental duplicate. Use the selected featured photograph as collection item 1 and the full-width opening image, without repeating it below. All 27 photographs remain available, and the other 26 retain their relative order. Keep the selected photograph as the share image, with card wording limited to JMD.media · LOOK UP! The earlier instruction to show the featured photograph twice and place it eighth is superseded.
+
+## November 27 logo update
+
+The gallery, About and Inquiries headers use the supplied telescope and star above the JMD MEDIA and LOOK UP lettering. Preserve the complete artwork at its original aspect ratio. The dark theme uses the same silhouette in warm white.
