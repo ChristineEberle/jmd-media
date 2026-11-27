@@ -30,5 +30,5 @@ Use a short-lived branch and pull request for a new gallery, navigation changes 
 ## Direct GitHub edits and recovery
 A collaborator with write access can edit a caption in gallery-data.js directly on the review branch. The same deployment process applies. If the result is wrong, revert that commit and verify the new build at the same address. Keep prior versions in Git history. A browser-based editorial form is a later option if repeated bulk updates justify maintaining another interface.
 
-## Possible second phase | ElevenLabs water agent
-First decide what the water agent should help a visitor do and which material Josh approves it to discuss. Prototype on a separate preview with an explicit start/stop control, microphone permission and a text alternative. Keep credentials server-side, agree on recording and retention, and set a usage budget. Test on mobile Safari with the gallery viewer before integrating it into the public experience.
+## QA testing after a change
+Open the signed-out preview and confirm all 27 photos appear once, with At the edge first. Check the changed photo in the wall and viewer. Test the theme switch, swipe, arrow keys, fixed controls and return navigation. Run the automated phone, tablet and desktop checks. For release, also check captions with Safari’s bars visible on an actual iPhone and verify the share card in iMessage.
