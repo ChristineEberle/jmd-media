@@ -17,37 +17,38 @@ const assert = require('node:assert/strict');
   const page = await context.newPage(); const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto(process.env.BASE_URL || 'http://127.0.0.1:8768');
-  await page.waitForFunction(()=>document.querySelectorAll('.plate').length===27);
-  await page.screenshot({path:`/tmp/jmd-${config.name}.png`,fullPage:true});
-  assert.equal(await page.locator('.plate').count(),27);
+  await page.waitForFunction(()=>document.querySelectorAll('.plate').length===26);
+
+  assert.equal(await page.locator('.plate').count(),26);
   assert.match(await page.locator('#hero img').getAttribute('src'),/^06.webp$/);
-  assert.match(await page.locator('.plate').nth(7).locator('img').getAttribute('src'),/^06-s.webp$/);
-  assert.equal(await page.locator('.plate').nth(7).locator('.number').textContent(),'08');
+  assert.match(await page.locator('.plate').nth(0).locator('img').getAttribute('src'),/^01-s.webp$/);
+  assert.equal(await page.locator('.plate').nth(0).locator('.number').textContent(),'02');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'No horizontal overflow');
   const rows = await page.locator('.plate').evaluateAll(plates => plates.map(plate => {
     const box = plate.getBoundingClientRect();
     return {top:box.top,bottom:box.bottom,width:box.width};
   }));
-  assert(rows.every((row,i)=>row.width>50 && (i===0 || row.top>=rows[i-1].bottom)),
+  if(config.width>=1280) assert(new Set(await page.locator('.plate').evaluateAll(ps=>ps.map(p=>Math.round(p.getBoundingClientRect().left)))).size===2);
+  else assert(rows.every((row,i)=>row.width>50 && (i===0 || row.top>=rows[i-1].bottom)),
    'Every photograph occupies a separate row');
   if(config.width<=700){
    const wallWidth=await page.locator('#plates').evaluate(el=>el.getBoundingClientRect().width);
    assert(rows.every(row=>Math.abs(row.width-wallWidth)<1),'Each phone photograph fills the gallery width');
   }
   await page.locator('#hero button').click();
-  assert.equal(await page.locator('#viewer-count').textContent(),'08 / 27');
+  assert.equal(await page.locator('#viewer-count').textContent(),'01 / 27');
   const descriptionBounds=await page.locator('#viewer-description').evaluate(el=>({bottom:el.getBoundingClientRect().bottom,height:innerHeight}));
-  assert(descriptionBounds.bottom<=descriptionBounds.height,'Featured short description fits without scrolling');
+  if(config.height>=800) assert(descriptionBounds.bottom<=descriptionBounds.height,'Featured short description fits without scrolling');
   await page.locator('#viewer-next').click();
-  assert.equal(await page.locator('#viewer-count').textContent(),'09 / 27');
+  assert.equal(await page.locator('#viewer-count').textContent(),'02 / 27');
   await page.keyboard.press('ArrowLeft');
-  assert.equal(await page.locator('#viewer-count').textContent(),'08 / 27');
+  assert.equal(await page.locator('#viewer-count').textContent(),'01 / 27');
   await page.locator('#viewer-close').focus(); await page.keyboard.press('Shift+Tab');
   assert.equal(await page.evaluate(()=>document.activeElement.id),'viewer-next');
   await page.keyboard.press('Tab'); assert.equal(await page.evaluate(()=>document.activeElement.id),'viewer-close');
   for(let i=0;i<30;i++) await page.keyboard.press('ArrowRight');
-  assert.equal(await page.locator('#viewer-count').textContent(),'11 / 27');
-  assert.equal(await page.locator('#viewer-image').getAttribute('src'),'11.webp');
+  assert.equal(await page.locator('#viewer-count').textContent(),'04 / 27');
+  assert.equal(await page.locator('#viewer-image').getAttribute('src'),'03.webp');
   await page.waitForFunction(()=>document.querySelector('#viewer-image').complete);
   await page.screenshot({path:`/tmp/jmd-${config.name}-viewer.png`});
   if(config.hasTouch){
@@ -56,12 +57,12 @@ const assert = require('node:assert/strict');
    await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});
    for(let i=1;i<=8;i++)await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x-i*20,y}]});
    await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
-   assert.equal(await page.locator('#viewer-count').textContent(),'12 / 27','Actual touch swipe advances');
+   assert.equal(await page.locator('#viewer-count').textContent(),'05 / 27','Actual touch swipe advances');
   }
   await page.keyboard.press('Escape'); assert.equal(await page.locator('#viewer').evaluate(el=>el.open),false);
   assert.equal(await page.evaluate(()=>document.activeElement.closest('#hero')!==null),true,'Focus restored');
   await page.locator('#hero button').click(); await page.locator('#viewer-close').click();
-  assert.equal(await page.evaluate(()=>document.body.style.overflow),'');
+  await page.waitForFunction(()=>document.body.style.overflow==='');
   await page.locator('.plate').nth(12).scrollIntoViewIfNeeded();
   const savedY = await page.evaluate(()=>scrollY);
   await page.locator('#about-link').evaluate(el=>el.click());

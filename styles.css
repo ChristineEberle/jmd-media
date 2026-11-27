@@ -95,3 +95,8 @@
 .viewer[open]{padding-bottom:calc(60px + env(safe-area-inset-bottom,0px));scroll-padding-bottom:calc(60px + env(safe-area-inset-bottom,0px))}
 .viewer-bottom{grid-template-columns:minmax(0,1fr)}
 .viewer-controls{position:fixed;right:max(8px,env(safe-area-inset-right,0px));bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;gap:6px;margin:0;padding:4px;background:var(--viewer)}
+
+@media (min-width:1280px){
+ .plates{display:block;columns:2;column-gap:clamp(32px,4vw,72px)}
+ .plate{break-inside:avoid;width:100%;max-width:none;margin:0 0 clamp(48px,5vw,88px)}
+}

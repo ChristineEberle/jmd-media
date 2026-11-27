@@ -25,7 +25,7 @@ const box={window:{},document,localStorage:{setItem(){}},matchMedia:()=>({matche
 vm.createContext(box);
 vm.runInContext(fs.readFileSync('gallery-data.js','utf8'),box);
 vm.runInContext(fs.readFileSync('gallery.js','utf8'),box);
-assert.equal(elements.plates.children.length,27);
+assert.equal(elements.plates.children.length,26);
 const run=code=>vm.runInContext(code,box);
 run('openPhoto(7)'); assert.equal(elements['viewer-count'].textContent,'08 / 27');assert(elements.viewer.open);
 assert.equal(document.activeElement.id,'viewer-close');

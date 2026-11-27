@@ -1,5 +1,44 @@
 {
   "buildCommand": "node build.cjs",
   "outputDirectory": "dist",
-  "framework": null
+  "framework": null,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "jmd-media-git-redesign-gallery-wall-pure-5890.vercel.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "jmd-gallery-preview.vercel.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/guide/requirements.md",
+      "destination": "/guide/JMD-Media-Gallery-Guide.md",
+      "permanent": false
+    }
+  ]
 }
