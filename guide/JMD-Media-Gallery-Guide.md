@@ -1,4 +1,4 @@
-# Gallery requirements
+# JMD Media Gallery Guide
 JMD Media | Light, Unscripted | 27 November 2026
 
 ## Identity and opening

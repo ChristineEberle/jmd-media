@@ -33,5 +33,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/guide/requirements.md",
+      "destination": "/guide/JMD-Media-Gallery-Guide.md",
+      "permanent": false
+    }
   ]
 }
