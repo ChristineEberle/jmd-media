@@ -102,8 +102,8 @@
 }
 
 /* Pure Cat credit: a decorative whole-cat mark in the existing theme. */
-.site-footer-credit{display:flex;align-items:center;justify-content:center;gap:6px}
-.pure-cat-mark{display:block;width:auto;height:22px;flex:none}
+.site-footer-credit{display:flex;align-items:center;justify-content:center;gap:6px;min-block-size:22px}
+.pure-cat-mark{display:block;width:auto;height:19px;flex:none}
 .pure-cat-mark-light{display:none}
 :root[data-theme=dark] .pure-cat-mark-ink{display:none}
 :root[data-theme=dark] .pure-cat-mark-light{display:block}
