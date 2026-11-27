@@ -1,21 +1,28 @@
 # How the gallery runs
 JMD Media | Architecture | Page 1 of 2
 
-## From a photograph to a page
-GitHub holds the site in ChristineEberle/jmd-media. The review branch is preview/josh-gallery-copy. Each photo in gallery-data.js has a stable ID, title, alt text, dimensions and optional caption or note. Its ID selects the full and smaller WebP files. Display numbers come from sequence, so moving a photo need not change its files.
+## Why Sixteen in the City comes up
+Sixteen in the City was the family trip recap and photo album for Scarlett’s Sweet Sixteen in San Francisco. Its publishing setup is the precedent Christine wanted for JMD Media. A gallery layout change on that project went from a GitHub commit to a Vercel deployment. JMD Media has its own repository and review branch, so Josh can review each edit by refreshing one bookmarked link after the build finishes.
 
-## What the browser receives
-The gallery, About and Inquiries are separate HTML pages. gallery.js builds the wall and viewer from the photo records. styles.css controls the wall, off-image captions, fixed viewer controls and theme-specific logo. site.js handles appearance and return navigation. The browser receives static files for normal gallery viewing.
+## From an edit to a visitor
+```mermaid
+flowchart TD
+  C["Authorized chat edit"] --> G["GitHub review branch"]
+  G --> V["Vercel · node build.cjs"]
+  V --> S["Static gallery and assets"]
+  S --> B["Visitor’s browser"]
+  B --> A["/api/contact"]
+  A -->|Configured| R["Resend email delivery"]
+  B -->|Current fallback| I["Instagram"]
+```
 
-## What runs on the server
-Vercel runs node build.cjs on a Git change. The build assembles dist and writes absolute share-card URLs into the HTML so messaging apps can fetch the featured image. A separate function at /api/contact checks delivery availability and handles submissions through Resend. Recipient and credentials belong in Vercel server settings. Instagram is the current fallback.
+## Gallery data
+Each record in gallery-data.js connects a stable photo ID to its title, alt text, caption and full-size and smaller WebP files. gallery.js uses the same record for the wall and enlarged viewer. Reordering the collection changes the display numbers while preserving the image files.
 
-## How a chat edit becomes visible
-Little Sixteen's recorded deployment identifies a GitHub main-branch commit. JMD uses the same Git-to-Vercel pattern with a dedicated review branch and a stable, branch-linked public address. An authorized commit starts a build. Once Vercel finishes and assigns the deployment, refresh the same link. An already-open tab does not reload itself.
+## Serving the gallery and inquiries
+Vercel serves the gallery, About and Inquiries as static pages. The build also supplies the absolute featured-image URL for link previews. Inquiries checks /api/contact for availability. Email delivery uses Resend when configured, with credentials and recipient details held on the server. Instagram is the current contact route.
 
-## Addresses
-Preview: https://jmd-gallery-preview.vercel.app
-Source: https://github.com/ChristineEberle/jmd-media/tree/preview/josh-gallery-copy
+[Open the gallery preview](https://jmd-gallery-preview.vercel.app/) · [View the review branch](https://github.com/ChristineEberle/jmd-media/tree/preview/josh-gallery-copy)
 
 ---
 # How to make changes
