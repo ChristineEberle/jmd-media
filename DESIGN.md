@@ -141,3 +141,10 @@ Two viewers interpreted the repeated featured photograph as an accidental duplic
 ## November 27 logo update
 
 The gallery, About and Inquiries headers use the supplied telescope and star above the JMD MEDIA and LOOK UP lettering. Preserve the complete artwork at its original aspect ratio. The dark theme uses the same silhouette in warm white.
+
+## Approved logo lock (27 November 2026)
+
+Christine and Josh approved the exact telescope-and-star mark shown in the Vercel gallery preview. Preserve its artwork, proportions, and existing theme variants: `logo-ink.png` for light backgrounds and `logo-light.png` for dark backgrounds. The same asset bytes were verified on both the gallery-wall and Josh-copy preview URLs. Do not redraw or replace this mark without a new design decision.
+
+- `logo-ink.png` SHA-256: `f6bb76263847823c689cbf05d6d2d19e9ffbc4682555e99ed5a629cd656d3386`
+- `logo-light.png` SHA-256: `1f7439f39673010b6218444938903f5fc485a2e24d0ede7e119f121a77ceb728`
