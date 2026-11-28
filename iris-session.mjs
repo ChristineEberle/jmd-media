@@ -28,7 +28,7 @@ export function makeIrisSession({getSdk, agentId, getAudio, update}) {
       const {Conversation} = await getSdk();
       if (attempt !== id) return;
       const pending = Conversation.startSession({
-        agentId, connectionType: "webrtc",
+        agentId, connectionType: "websocket",
         onDisconnect() {
           if (attempt !== id) return;
           ++id; session = null; render("idle");
