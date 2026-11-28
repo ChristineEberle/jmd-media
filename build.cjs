@@ -13,7 +13,7 @@ const url = new URL(origin);
 if (url.protocol !== 'https:' && url.hostname !== 'localhost') throw new Error('SITE_URL must use HTTPS');
 fs.mkdirSync('dist', { recursive: true });
 for (const file of fs.readdirSync('.')) {
- if (/\.(webp|png|jpg|css)$/.test(file) || ['gallery.js','gallery-data.js','site.js','contact.js','pure-cat-mark-small-black.svg','pure-cat-mark-small-white.svg'].includes(file)) fs.copyFileSync(file,path.join('dist',file));
+ if (/\.(webp|png|jpg|css)$/.test(file) || ['iris.js','iris-session.mjs','gallery.js','gallery-data.js','site.js','contact.js','pure-cat-mark-small-black.svg','pure-cat-mark-small-white.svg'].includes(file)) fs.copyFileSync(file,path.join('dist',file));
 }
 fs.cpSync('guide', path.join('dist', 'guide'), {recursive:true});
 for (const file of ['index.html', 'about.html', 'inquiries.html']) {
@@ -22,3 +22,5 @@ for (const file of ['index.html', 'about.html', 'inquiries.html']) {
   .replaceAll('__GALLERY_URL__', new URL('/', url).href);
  fs.writeFileSync(path.join('dist', file), html);
 }
+
+require('esbuild').buildSync({entryPoints:['iris-sdk-entry.mjs'],bundle:true,format:'esm',minify:true,outfile:'dist/iris-sdk.js'});

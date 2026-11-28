@@ -18,6 +18,7 @@
 <meta name="twitter:image" content="__SOCIAL_IMAGE_URL__">
 <script>try{const t=localStorage.getItem('jmd-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="styles.css?v=pure-cat-footer-3">
+<link rel="stylesheet" href="iris.css">
 <script src="site.js" defer></script>
 <script src="gallery-data.js" defer></script>
 <script src="gallery.js" defer></script>
@@ -25,11 +26,23 @@
 <body>
 <a class="skip" href="#collection">Skip to photographs</a>
 <div id="page">
-<header class="mast">
+<header class="mast iris-mast">
 <a class="brand" href="#top" aria-label="JMD.media home"><img class="logo-ink" src="logo-ink.png" width="1560" height="1680" alt="JMD.media"><img class="logo-light" src="logo-light.png" width="1560" height="1680" alt="JMD.media"></a>
-<nav aria-label="Site"><a href="about.html" id="about-link">About</a><a href="inquiries.html" id="inquiries-link">Inquiries</a></nav>
+<nav aria-label="Site"><a href="about.html" id="about-link">About</a><a href="inquiries.html" id="inquiries-link">Inquiries</a><button type="button" id="iris-toggle" aria-expanded="false" aria-controls="iris-panel">Feedback</button></nav>
 <button class="theme" id="theme" type="button" aria-label="Switch to dark theme">◐</button>
 </header>
+<section id="iris-panel" aria-labelledby="iris-title" hidden>
+  <h2 id="iris-title" tabindex="-1">Talk to Iris</h2>
+  <p>Meet Iris, an AI agent who is gathering feedback from early visitors to Josh’s new gallery. Talk to her as you look around!</p>
+  <p id="iris-terms">Chatting with Iris is optional. We may save audio, a transcript, or both to help make the gallery better.</p>
+  <p id="iris-error" role="alert" hidden></p>
+  <div class="iris-actions">
+    <button type="button" id="iris-start" aria-describedby="iris-terms">Agree and start</button>
+    <button type="button" data-iris-stop hidden>End call</button>
+    <button type="button" id="iris-back">Back to gallery</button>
+  </div>
+</section>
+<div class="iris-status" id="iris-status" hidden><span data-iris-label aria-live="polite"></span><button type="button" data-iris-stop>End call</button></div>
 <main id="top">
 <section class="opening" aria-labelledby="site-title"><div class="opening-line"><h1 id="site-title">L<span class="tagline-first-o">o</span>ok Up!</h1></div><h2 class="gallery-heading" id="gallery-title">Light, Unscripted</h2><figure class="hero" id="hero"></figure></section>
 <section class="collection" id="collection" aria-labelledby="gallery-title"><div class="plates" id="plates"></div></section>
@@ -45,8 +58,10 @@
 </footer>
 </div>
 <dialog class="viewer" id="viewer" tabindex="-1" aria-labelledby="viewer-title">
+<div id="iris-viewer-status" class="iris-viewer-status" hidden><span data-iris-label></span><button type="button" data-iris-stop>End call</button></div>
 <div class="viewer-stage" id="viewer-stage"><img id="viewer-image" alt="" draggable="false"><p id="image-error" hidden>Unable to load this photograph. Please try another or reopen it.</p></div>
 <div class="viewer-bottom"><div class="viewer-caption"><span id="viewer-count" aria-live="polite" aria-atomic="true"></span><h2 id="viewer-title"></h2></div><div class="viewer-controls"><button id="viewer-close" type="button" aria-label="Close photograph viewer">×</button><button id="viewer-prev" type="button" aria-label="Previous photograph">←</button><button id="viewer-next" type="button" aria-label="Next photograph">→</button></div><p id="viewer-description"></p><p id="viewer-note" hidden></p></div>
 </dialog>
+<script type="module" src="iris.js"></script>
 </body>
 </html>

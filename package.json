@@ -1,0 +1,1 @@
+{"name":"jmd-media","private":true,"scripts":{"test:iris":"node --test iris-session.test.mjs"},"dependencies":{"@elevenlabs/client":"1.38.0","esbuild":"0.28.2"}}
