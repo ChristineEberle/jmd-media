@@ -1,3 +1,4 @@
+/* 2026-11-27T19:17-08:00 | Swami D | For Pure and Josh | Group the opening photo with its caption on phones. */
 :root{color-scheme:light;--paper:#f8f7f4;--ink:#242623;--link:#3374a0;--soft:#6a6b65;--line:#d9d9d2;--viewer:#f8f7f4;--gutter:clamp(12px,2.1vw,34px);font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink)}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--paper:#151515;--ink:#f3f2ef;--link:#648faf;--soft:#b5b5b0;--line:#383838;--viewer:#101010}}
 :root[data-theme=dark]{color-scheme:dark;--paper:#151515;--ink:#f3f2ef;--link:#648faf;--soft:#b5b5b0;--line:#383838;--viewer:#101010}
@@ -115,4 +116,9 @@
 /* Leave space for the complete caption above the fixed controls on phones. */
 @media (max-width:700px), (orientation:landscape) and (max-height:500px) and (pointer:coarse){
   .viewer-stage{flex-shrink:1}
+}
+
+@media(max-width:700px){
+  #hero .caption{padding-top:6px}
+  .opening + #collection{padding-top:18px}
 }
