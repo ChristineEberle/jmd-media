@@ -1,3 +1,4 @@
+/* 2026-11-27T22:02-08:00 | Swami D | For Pure and Josh | Scale the shared header for desktop. */
 :root{color-scheme:light;--paper:#f8f7f4;--ink:#242623;--link:#3374a0;--soft:#6a6b65;--line:#d9d9d2;--viewer:#f8f7f4;--gutter:clamp(12px,2.1vw,34px);font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink)}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--paper:#151515;--ink:#f3f2ef;--link:#648faf;--soft:#b5b5b0;--line:#383838;--viewer:#101010}}
 :root[data-theme=dark]{color-scheme:dark;--paper:#151515;--ink:#f3f2ef;--link:#648faf;--soft:#b5b5b0;--line:#383838;--viewer:#101010}
@@ -115,4 +116,12 @@
 /* Leave space for the complete caption above the fixed controls on phones. */
 @media (max-width:700px), (orientation:landscape) and (max-height:500px) and (pointer:coarse){
   .viewer-stage{flex-shrink:1}
+}
+
+/* Scale the shared masthead on desktop without changing the touch layouts. */
+@media (min-width:1200px) and (hover:hover) and (pointer:fine){
+  .mast{gap:clamp(26px,2.3vw,42px);padding-block:9px}
+  .mast .brand img{width:clamp(112px,7.2vw,138px)}
+  .mast nav{align-items:center;gap:clamp(28px,2.35vw,44px);font-size:clamp(16px,1vw,19px)}
+  .mast .theme{flex:none;width:clamp(46px,2.7vw,52px);height:clamp(46px,2.7vw,52px);font-size:clamp(23px,1.4vw,27px)}
 }
