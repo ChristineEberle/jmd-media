@@ -5,11 +5,11 @@ const start = by("iris-start"), error = by("iris-error");
 const status = by("iris-status"), viewer = by("iris-viewer-status");
 let state = "idle";
 const syncStatus = () => { status.hidden = state === "idle" || !panel.hidden; };
-const showPanel = open => {
+const showPanel = (open, moveFocus = true) => {
   panel.hidden = !open;
   toggle.setAttribute("aria-expanded", String(open));
   syncStatus();
-  (open ? by("iris-title") : toggle).focus({preventScroll:true});
+  if (moveFocus) (open ? by("iris-title") : toggle).focus({preventScroll:true});
 };
 const feedback = makeIrisSession({
   agentId: "agent_5501m8fdzvx5e01r3an2czxdferh",
@@ -19,6 +19,7 @@ const feedback = makeIrisSession({
     return navigator.mediaDevices.getUserMedia({audio:true});
   },
   update(snapshot) {
+    const wasLive = state === "live";
     ({state} = snapshot);
     const active = state !== "idle";
     const mic = state === "live" || state === "connecting" || state === "stopping";
@@ -29,6 +30,10 @@ const feedback = makeIrisSession({
       row.querySelector("[data-iris-label]").textContent = label;
     }
     toggle.dataset.live = String(mic);
+    toggle.setAttribute("aria-label", mic ? "Feedback, microphone on" : "Feedback");
+    if (state === "live" && !wasLive && !panel.hidden) {
+      showPanel(false, panel.contains(document.activeElement));
+    }
     panel.querySelector("[data-iris-stop]").hidden = !active;
     for (const el of document.querySelectorAll("[data-iris-stop]")) el.disabled = state === "stopping";
     syncStatus();
@@ -38,7 +43,13 @@ const feedback = makeIrisSession({
     error.hidden = !snapshot.error;
   },
 });
-toggle.addEventListener("click", () => showPanel(panel.hidden));
+toggle.addEventListener("click", () => {
+  if (state === "live" || state === "stopping") {
+    status.querySelector("[data-iris-stop]").focus({preventScroll:true});
+    return;
+  }
+  showPanel(panel.hidden);
+});
 back.addEventListener("click", () => showPanel(false));
 start.addEventListener("click", feedback.start);
 for (const el of document.querySelectorAll("[data-iris-stop]")) {
