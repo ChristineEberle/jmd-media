@@ -1,3 +1,4 @@
+/* 2026-11-27T19:11-08:00 | Swami D | For Pure and Josh | Style the Early preview label. */
 /* Gallery-only. No widgets or overlays. */
 #hero{padding-bottom:0}
 #collection{padding-top:0}
@@ -5,7 +6,11 @@
 .iris-mast nav{gap:clamp(8px, 2vw, 28px);align-items:center}
 .iris-mast .brand img{max-width:100%}
 .iris-mast .theme{flex:none}
-#iris-toggle{border:0;background:none;color:var(--link);padding:0;min-height:44px;display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
+#iris-toggle{--iris-copper:#9a5134;border:0;background:none;color:var(--iris-copper);padding:0;margin-inline-start:clamp(3px,1vw,12px);min-height:44px;display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;font-size:.9em;line-height:1.1;white-space:nowrap}
+.iris-preview-label{color:var(--soft);font-size:max(9px,.78em);letter-spacing:.03em}
+.iris-feedback-row{display:inline-flex;align-items:center;gap:3px}
+:root[data-theme=dark] #iris-toggle{--iris-copper:#d98a62}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) #iris-toggle{--iris-copper:#d98a62}}
 #iris-panel{margin:12px 0 0;padding:16px;color:#ece9e4;background:#121417;border:1px solid #2a2d31;max-width:38rem}
 #iris-panel h2{margin:0;font-size:1.15rem}
 #iris-panel > p:not([role=alert]){font-style:italic}
