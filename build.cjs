@@ -11,6 +11,9 @@ const publicPreviewOrigin = process.env.VERCEL_GIT_COMMIT_REF === 'preview/josh-
 const origin = process.env.SITE_URL || publicPreviewOrigin || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://jmd-media.vercel.app');
 const url = new URL(origin);
 if (url.protocol !== 'https:' && url.hostname !== 'localhost') throw new Error('SITE_URL must use HTTPS');
+const pilotEmail = (process.env.JMD_PILOT_CONTACT_EMAIL || '').trim();
+const safeEmail = /^[A-Za-z0-9._+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/.test(pilotEmail);
+const pilotContact = safeEmail ? '<p class="contact-email"><a href="mailto:' + pilotEmail + '">' + pilotEmail + '</a></p>' : '';
 fs.mkdirSync('dist', { recursive: true });
 for (const file of fs.readdirSync('.')) {
  if (/\.(webp|png|jpg|css)$/.test(file) || ['iris.js','iris-session.mjs','gallery.js','gallery-data.js','site.js','contact.js','pure-cat-mark-small-black.svg','pure-cat-mark-small-white.svg'].includes(file)) fs.copyFileSync(file,path.join('dist',file));
@@ -19,7 +22,8 @@ fs.cpSync('guide', path.join('dist', 'guide'), {recursive:true});
 for (const file of ['index.html', 'about.html', 'inquiries.html']) {
  const html = fs.readFileSync(file, 'utf8')
   .replaceAll('__SOCIAL_IMAGE_URL__', new URL('/06.webp?v=gallery-wall-1', url).href)
-  .replaceAll('__GALLERY_URL__', new URL('/', url).href);
+  .replaceAll('__GALLERY_URL__', new URL('/', url).href)
+  .replace('<!-- JMD_PILOT_CONTACT -->', pilotContact);
  fs.writeFileSync(path.join('dist', file), html);
 }
 
